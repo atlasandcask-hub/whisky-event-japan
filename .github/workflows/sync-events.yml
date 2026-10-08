@@ -1,0 +1,46 @@
+
+name: Sync WEJ Events
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install google-auth requests
+
+      - name: Sync events
+        env:
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+        run: python scripts/sync_events.py
+
+      - name: Commit updated events
+        run: |
+          git add events.json
+          if ! git diff --cached --quiet; then
+            git -c user.name="WEJ Sync Bot" \
+                -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+                commit -m "Update WEJ events"
+            git push
+          fi
