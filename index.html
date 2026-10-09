@@ -1,1 +1,83 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="全国のウイスキーイベントを探せる WHISKY EVENT JAPAN"><title>WEJ | WHISKY EVENT JAPAN</title><style>:root{--bg:#f8f6ef;--ink:#25231f;--accent:#a57a45;--line:#ddd6c9}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Hiragino Kaku Gothic ProN',sans-serif}header,main,footer{max-width:1100px;margin:auto;padding:24px}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}header strong{font-size:28px;letter-spacing:.15em}header small{display:block;font-size:10px;letter-spacing:.13em}a{color:inherit}nav a{font-size:13px;text-decoration:none}.hero{padding:65px 0 45px}.kicker{color:var(--accent);letter-spacing:.15em;font-size:12px;font-weight:bold}.hero h1{font-family:serif;font-size:clamp(32px,5vw,57px);line-height:1.45;margin:16px 0}.hero p{line-height:1.9;color:#686158}.bar{height:2px;background:var(--accent);width:85px;margin-top:30px}.controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:20px 0 30px}input,select{width:100%;border:1px solid var(--line);border-radius:7px;padding:14px;background:white;font-size:15px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid var(--line);border-radius:12px;padding:23px;display:flex;flex-direction:column;min-height:260px}.date{font-size:12px;color:var(--accent);font-weight:bold}.card h3{line-height:1.5;font-size:19px}.meta{font-size:13px;color:#777;line-height:1.7}.card p{font-size:13px;line-height:1.8;flex:1}.card a{font-weight:bold;text-decoration:none;border-top:1px solid var(--line);padding-top:14px;font-size:14px}.note,footer{font-size:12px;color:#777;line-height:1.8}.note{margin:40px 0}footer{border-top:1px solid var(--line)}@media(max-width:800px){.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.cards,.controls{grid-template-columns:1fr}.hero{padding:42px 0}.card{min-height:0}}</style></head><body><header><div><strong>WEJ</strong><small>WHISKY EVENT JAPAN</small></div><nav><a href="#events">イベントを探す</a></nav></header><main><section class="hero"><div class="kicker">DISCOVER WHISKY EVENTS IN JAPAN</div><h1>全国のウイスキーイベントを、<br>もっと探しやすく。</h1><p>フェスティバル、蒸溜所イベント、試飲会、セミナー。<br>気になるイベントを見つけて、主催者の公式情報へ。</p><div class="bar"></div></section><section id="events"><h2>EVENTS　<small id="count" style="font-size:13px;color:#777"></small></h2><div class="controls"><input id="q" placeholder="イベント名・会場などで検索" aria-label="検索"><select id="region" aria-label="地域"><option value="">全国</option></select><select id="category" aria-label="カテゴリ"><option value="">すべてのカテゴリ</option></select></div><div id="cards" class="cards"></div><p class="note">2026年10月8日時点のWEJイベントDBをもとに作成した試作版です。日時・料金・申込状況は変更される場合があります。必ず主催者の公式情報をご確認ください。掲載情報はイベント主催者による公認を意味しません。</p></section></main><footer>© WHISKY EVENT JAPAN　｜　<a href="https://www.instagram.com/whiskyeventjapan/">Instagram @whiskyeventjapan</a></footer><script>let all=[];const $=id=>document.getElementById(id);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));function render(){let q=$('q').value.toLowerCase(),r=$('region').value,c=$('category').value;let a=all.filter(e=>(!q||[e.title,e.venue,e.region].join(' ').toLowerCase().includes(q))&&(!r||e.region===r)&&(!c||e.category===c));$('count').textContent=a.length+'件';$('cards').innerHTML=a.map(e=>`<article class="card"><div class="date">${esc(e.dateLabel)} ／ ${esc(e.category)}</div><h3>${esc(e.title)}</h3><div class="meta">${esc(e.region)}・${esc(e.venue)}<br>料金：${esc(e.price)}</div><p>${esc(e.description)}</p><a href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">公式情報・チケット ↗</a></article>`).join('')||'<p>該当するイベントがありません。</p>'}fetch('./events.json').then(r=>r.json()).then(d=>{all=d.sort((a,b)=>a.date.localeCompare(b.date));for(let [id,key] of [['region','region'],['category','category']])for(let v of [...new Set(all.map(e=>e[key]))].sort())$(id).add(new Option(v,v));['q','region','category'].forEach(id=>$(id).addEventListener(id==='q'?'input':'change',render));render()}).catch(()=>{$('cards').textContent='イベントデータを読み込めませんでした。公開サーバーで確認してください。'});</script></body></html>
+
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="全国のウイスキーイベントを探せる WHISKY EVENT JAPAN">
+<title>WEJ | WHISKY EVENT JAPAN</title>
+<style>
+:root{--bg:#f8f6ef;--ink:#25231f;--accent:#a57a45;--line:#ddd6c9;--muted:#686158}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Hiragino Kaku Gothic ProN',sans-serif}
+header,main,footer{max-width:1100px;margin:auto;padding:24px}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}header strong{font-size:28px;letter-spacing:.15em}header small{display:block;font-size:10px;letter-spacing:.13em}a{color:inherit}nav a{font-size:13px;text-decoration:none}.hero{padding:65px 0 45px}.kicker{color:var(--accent);letter-spacing:.15em;font-size:12px;font-weight:bold}.hero h1{font-family:serif;font-size:clamp(32px,5vw,57px);line-height:1.45;margin:16px 0}.hero p{line-height:1.9;color:var(--muted)}.bar{height:2px;background:var(--accent);width:85px;margin-top:30px}
+.controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:20px 0 15px}input,select{width:100%;border:1px solid var(--line);border-radius:7px;padding:14px;background:white;font-size:15px}.options{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--muted);margin:0 0 24px}.options input{width:auto;accent-color:var(--accent)}
+.month{margin:36px 0 18px;border-bottom:1px solid var(--line);padding-bottom:14px;display:flex;align-items:baseline;gap:14px}.month h3{margin:0;font-size:24px}.month span{font-size:12px;color:#777;letter-spacing:.08em}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid var(--line);border-radius:12px;padding:23px;display:flex;flex-direction:column;min-height:260px}.card.ended{background:#f0eee9;color:#777}.date{font-size:12px;color:var(--accent);font-weight:bold}.card h4{line-height:1.5;font-size:19px;margin:16px 0}.meta{font-size:13px;color:#777;line-height:1.7}.card p{font-size:13px;line-height:1.8;flex:1}.card a{font-weight:bold;text-decoration:none;border-top:1px solid var(--line);padding-top:14px;font-size:14px}.card.ended a{color:#777}.status{display:inline-block;font-size:11px;border-radius:999px;padding:5px 10px;font-weight:600;border:1px solid #d4cbbb;color:#635746;background:#f8f4ec}.status.live{color:#316849;background:#e9f5ec;border-color:#c6e2ce}.status.ended{color:#777;background:#e9e9e9;border-color:#ddd}.status.sold{color:#914444;background:#f8eaea;border-color:#edd0d0}.status.deadline{color:#805d27;background:#faf0d9;border-color:#e8d4aa}.card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.empty{padding:25px 0;color:#777}.note,footer{font-size:12px;color:#777;line-height:1.8}.note{margin:40px 0}footer{border-top:1px solid var(--line)}
+@media(max-width:800px){.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.cards,.controls{grid-template-columns:1fr}.hero{padding:42px 0}.card{min-height:0}.month h3{font-size:21px}}
+</style>
+</head>
+<body>
+<header><div><strong>WEJ</strong><small>WHISKY EVENT JAPAN</small></div><nav><a href="#events">イベントを探す</a></nav></header>
+<main><section class="hero"><div class="kicker">DISCOVER WHISKY EVENTS IN JAPAN</div><h1>全国のウイスキーイベントを、<br>もっと探しやすく。</h1><p>フェスティバル、蒸溜所イベント、試飲会、セミナー。<br>気になるイベントを見つけて、主催者の公式情報へ。</p><div class="bar"></div></section>
+<section id="events"><h2>EVENTS　<small id="count" style="font-size:13px;color:#777"></small></h2>
+<div class="controls"><input id="q" placeholder="イベント名・会場などで検索" aria-label="検索"><select id="region" aria-label="地域"><option value="">全国</option></select><select id="category" aria-label="カテゴリ"><option value="">すべてのカテゴリ</option></select></div>
+<label class="options"><input type="checkbox" id="hideEnded" checked>終了したイベントを非表示にする</label>
+<div id="cards" aria-live="polite"></div>
+<p class="note">イベント情報はWEJイベントDBをもとに更新しています。開催中・終了の判定は日本時間の日付に基づきます。完売や申込締切は情報登録時点の状態です。日時・料金・申込状況は変更される場合があります。必ず主催者の公式情報をご確認ください。掲載情報はイベント主催者による公認を意味しません。</p></section></main>
+<footer>© WHISKY EVENT JAPAN　｜　<a href="https://www.instagram.com/whiskyeventjapan/">Instagram @whiskyeventjapan</a></footer>
+<script>
+let all=[];const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const tokyoToday=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const toISO=(y,m,d)=>`${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+function period(e){
+  const start=String(e.date||'').slice(0,10);
+  const label=String(e.dateLabel||'');
+  let end=start;
+  const slash=label.match(/(20\d{2})\/(\d{1,2})(?:\/(\d{1,2}))?\s*[-〜～]\s*(?:(20\d{2})\/)?(?:(\d{1,2})\/)?(\d{1,2})/);
+  if(slash){const y=slash[4]||slash[1],m=slash[5]||slash[2],d=slash[6];end=toISO(y,m,d)}
+  else {
+    const md=label.match(/(\d{1,2})月(\d{1,2})日[^\d]*[〜～-]\s*(?:(\d{1,2})月)?(\d{1,2})日/);
+    if(md){const y=start.slice(0,4),m=md[3]||md[1];end=toISO(y,m,md[4])}
+  }
+  // A month-only date such as "2026/12" does not provide an actual event day.
+  // Do not claim it has ended before the end of that month.
+  if(/^20\d{2}\/\d{1,2}$/.test(label)){
+    const [y,m]=label.split('/').map(Number);
+    end=toISO(y,m,new Date(Date.UTC(y,m,0)).getUTCDate());
+  }
+  // Open-ended dates such as 2026/10/07〜 have no confirmed end date.
+  if(/[〜～]\s*$/.test(label))end='9999-12-31';
+  return {start,end:end<start?start:end};
+}
+function status(e,today){
+  const p=period(e),raw=String(e.status||'').toLowerCase(),notes=String(e.description||'').toLowerCase();
+  if(p.end<today)return ['イベント終了','ended'];
+  if(raw.includes('sold out')||raw.includes('完売')||notes.startsWith('sold out')||notes.startsWith('完売'))return ['完売','sold'];
+  if(raw.includes('申込締切')||notes.startsWith('申込締切'))return ['申込締切','deadline'];
+  if(p.start<=today)return ['開催中・実施期間','live'];
+  return ['開催予定','upcoming'];
+}
+function render(){
+ const today=tokyoToday(),q=$('q').value.toLowerCase(),r=$('region').value,c=$('category').value;
+ let filtered=all.filter(e=>(!q||[e.title,e.venue,e.region].join(' ').toLowerCase().includes(q))&&(!r||e.region===r)&&(!c||e.category===c)&&(!$('hideEnded').checked||period(e).end>=today));
+ filtered.sort((a,b)=>a.date.localeCompare(b.date)||a.title.localeCompare(b.title,'ja'));
+ $('count').textContent=filtered.length+'件';
+ if(!filtered.length){$('cards').innerHTML='<p class="empty">該当するイベントがありません。</p>';return}
+ const groups=new Map();for(const e of filtered){const key=e.date.slice(0,7);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(e)}
+ $('cards').innerHTML=[...groups].map(([key,events])=>{
+  const [year,month]=key.split('-');
+  return `<section class="month-group"><div class="month"><h3>${esc(year)}年${Number(month)}月</h3><span>${events.length}件</span></div><div class="cards">${events.map(e=>{
+   const [label,kind]=status(e,today);
+   return `<article class="card ${kind==='ended'?'ended':''}"><div class="card-top"><div class="date">${esc(e.dateLabel||e.date)} ／ ${esc(e.category)}</div><span class="status ${kind}">${label}</span></div><h4>${esc(e.title)}</h4><div class="meta">${esc(e.region)}・${esc(e.venue)}<br>料金：${esc(e.price)}</div><p>${esc(e.description)}</p><a href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">公式情報・チケット ↗</a></article>`
+  }).join('')}</div></section>`
+ }).join('');
+}
+fetch('./events.json').then(r=>{if(!r.ok)throw Error('fetch failed');return r.json()}).then(d=>{
+ if(!Array.isArray(d))throw Error('invalid events');all=d.filter(e=>/^\d{4}-\d{2}-\d{2}$/.test(e.date||''));
+ for(const [id,key] of [['region','region'],['category','category']])for(const v of [...new Set(all.map(e=>e[key]).filter(Boolean))].sort())$(id).add(new Option(v,v));
+ ['q','region','category','hideEnded'].forEach(id=>$(id).addEventListener(id==='q'?'input':'change',render));render();
+}).catch(()=>{$('cards').textContent='イベントデータを読み込めませんでした。公開サーバーで確認してください。'});
+</script>
+</body>
+</html>
