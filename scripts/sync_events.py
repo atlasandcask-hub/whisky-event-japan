@@ -1,49 +1,112 @@
+import csv
+import io
 import json
-import os
+import re
+import urllib.request
+from datetime import date
 from pathlib import Path
+from urllib.parse import urlparse
 
-import google.auth
-from google.auth.transport.requests import AuthorizedSession
-
-SHEET_ID = os.environ.get("GOOGLE_SHEET_ID", "").strip()
+SHEET_ID = "1_A0aQ2elKC4Rs_SET6WIHqwHbgAUZSnaB6A2TfvEzhs"
+SHEET_GID = "1399683849"
+CSV_URL = (
+    f"https://docs.google.com/spreadsheets/d/{SHEET_ID}"
+    f"/export?format=csv&gid={SHEET_GID}"
+)
 OUTPUT = Path("events.json")
+MIN_EVENTS = 8
 
-COLUMNS = [
-    "id", "publish", "status", "name", "category", "date",
-    "start_time", "end_time", "prefecture", "venue", "price",
-    "ticket_release", "deadline", "organizer", "official_url",
-    "source_url", "verified_date", "confidence", "instagram",
-    "x_post", "notes", "updated_at"
-]
+REQUIRED = {
+    "ID", "掲載判定", "イベント名", "開催日",
+    "カテゴリ", "都道府県", "会場", "公式URL"
+}
+
 
 def main():
-    if not SHEET_ID:
-        raise RuntimeError("GOOGLE_SHEET_ID is not set. Check the GitHub Actions secret.")
-
-    credentials, _ = google.auth.default(
-        scopes=["https://www.googleapis.com/auth/spreadsheets.readonly"]
+    request = urllib.request.Request(
+        CSV_URL,
+        headers={"User-Agent": "WEJ-Event-Sync/1.0"}
     )
-    session = AuthorizedSession(credentials)
-    url = f"https://sheets.googleapis.com/v4/spreadsheets/{SHEET_ID}/values/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88DB%21A2%3AV"
-    response = session.get(url, timeout=30)
-    response.raise_for_status()
-    rows = response.json().get("values", [])
+
+    with urllib.request.urlopen(request, timeout=30) as response:
+        raw = response.read(2_000_001)
+
+    if len(raw) > 2_000_000:
+        raise ValueError("CSV too large. Existing data preserved.")
+
+    reader = csv.DictReader(io.StringIO(raw.decode("utf-8-sig")))
+
+    if not reader.fieldnames or not REQUIRED.issubset(reader.fieldnames):
+        raise ValueError("Invalid CSV headers. Existing data preserved.")
+
+    existing = {}
+    if OUTPUT.exists():
+        for item in json.loads(OUTPUT.read_text(encoding="utf-8")):
+            existing[(item.get("title"), item.get("date"))] = item
 
     events = []
-    for row in rows:
-        row = (row + [""] * len(COLUMNS))[:len(COLUMNS)]
-        item = dict(zip(COLUMNS, row))
-        if item["publish"].strip().lower() not in ("掲載", "掲載する", "公開", "yes", "true", "1", "○", "◯"):
-            continue
-        if not item["name"].strip():
-            continue
-        events.append(item)
+    seen_ids = set()
 
-    OUTPUT.write_text(
+    for row in reader:
+        if (row.get("掲載判定") or "").strip() != "掲載":
+            continue
+
+        event_id = (row.get("ID") or "").strip()
+        name = (row.get("イベント名") or "").strip()
+        raw_date = (row.get("開催日") or "").strip()
+        url = (row.get("公式URL") or "").strip()
+
+        match = re.search(
+            r"(20\d{2})/(\d{1,2})(?:/(\d{1,2}))?",
+            raw_date
+        )
+
+        if not event_id or not name or not match or event_id in seen_ids:
+            raise ValueError("Invalid event data. Existing data preserved.")
+
+        event_date = date(
+            int(match.group(1)),
+            int(match.group(2)),
+            int(match.group(3) or 1)
+        ).isoformat()
+
+        parsed_url = urlparse(url)
+        if parsed_url.scheme != "https" or not parsed_url.netloc:
+            raise ValueError("Invalid official URL. Existing data preserved.")
+
+        seen_ids.add(event_id)
+
+        old = existing.get((name, event_date), {})
+        status = (row.get("ステータス") or "").strip()
+        notes = (row.get("備考") or "").strip()
+
+        events.append({
+            "title": name,
+            "date": event_date,
+            "dateLabel": raw_date,
+            "region": (row.get("都道府県") or "").strip(),
+            "category": (row.get("カテゴリ") or "その他").strip(),
+            "venue": (row.get("会場") or "公式で確認").strip(),
+            "price": (row.get("料金") or "公式で確認").strip(),
+            "description": old.get("description") or
+                "。".join(filter(None, [status, notes]))[:180],
+            "url": url
+        })
+
+    if len(events) < MIN_EVENTS:
+        raise ValueError("Too few events. Existing data preserved.")
+
+    events.sort(key=lambda item: (item["date"], item["title"]))
+
+    temporary = OUTPUT.with_suffix(".json.tmp")
+    temporary.write_text(
         json.dumps(events, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8"
     )
-    print(f"Synced {len(events)} published events to {OUTPUT}")
+    temporary.replace(OUTPUT)
+
+    print(f"Synced {len(events)} published events.")
+
 
 if __name__ == "__main__":
     main()
