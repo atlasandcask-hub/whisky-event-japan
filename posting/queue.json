@@ -95,7 +95,7 @@
       "content_hash": "",
       "approved_hash": null,
       "verification_status": "needs_official_recheck",
-      "notes": "Canva画像は未書き出し。公式情報の変更・受付終了を再確認すること",
+      "notes": "Saved Canva revision verified: 4 pages, 1080x1350, named exhibitors and tasting value. No export yet.",
       "official_url": "https://tatekawaya.com/products/detail/965",
       "story_url": "https://tatekawaya.com/products/detail/965",
       "canva_page_count": 4,
@@ -108,8 +108,10 @@
       "approval_ready": false,
       "review_blockers": [
         "Official event status not reverified",
-        "Four full-resolution Canva pages not exported to stable media URLs"
-      ]
+        "Visually inspect font and text overflow in Canva before final approval"
+      ],
+      "canva_edit_url": "https://www.canva.com/d/6YcaAStn6Lg5z5v",
+      "canva_review_status": "saved_text_and_dimensions_verified"
     },
     {
       "id": "niseko-seminar-2026",
