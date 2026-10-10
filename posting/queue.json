@@ -115,29 +115,29 @@
       "id": "niseko-seminar-2026",
       "title": "八海醸造 ニセコ蒸留所セミナー",
       "event_date": "2026-10-25",
-      "canva_design_id": "DAHXj_vu6eg",
+      "canva_design_id": "DAHXklZurVw",
       "status": "review",
       "caption": "🥃 八海醸造ニセコ蒸留所 バーテンダーズセミナー\n\nウイスキー・クラフトジンの製造とテイスティング。\n\n📅 10月25日 15:00〜16:30\n📍 北海道・札幌コンファレンスホールB\n💰 参加無料\n👥 20歳以上の飲食店従事者対象\n\n詳細は公式サイトをご確認ください。\n@whiskyeventjapan\n\n#ウイスキー #お酒 #蒸留所 #クラフトジン #テイスティング",
       "media_urls": [],
       "content_hash": "",
       "approved_hash": null,
       "verification_status": "needs_official_recheck",
-      "notes": "Canva画像は未書き出し。公式情報の変更・受付終了を再確認すること",
+      "notes": "Resized copy prepared. Full-resolution export and official verification still pending.",
       "official_url": "https://www.bartender.or.jp/2026/10/22623",
       "story_url": "https://www.bartender.or.jp/2026/10/22623",
       "canva_page_count": 4,
       "canva_dimensions": {
         "width": 1080,
-        "height": 1440
+        "height": 1350
       },
       "media_export_status": "not_exported",
       "official_check_status": "pending",
       "approval_ready": false,
       "review_blockers": [
         "Official event status not reverified",
-        "Four full-resolution Canva pages not exported to stable media URLs",
-        "Resize Canva from 1080x1440 to 1080x1350"
-      ]
+        "Four full-resolution Canva pages not exported to stable media URLs"
+      ],
+      "canva_original_design_id": "DAHXj_vu6eg"
     }
   ]
 }
