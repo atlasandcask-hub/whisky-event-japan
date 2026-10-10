@@ -1,5 +1,71 @@
 {
   "schema_version": 1,
   "auto_publish_enabled": false,
-  "posts": []
+  "posts": [
+    {
+      "id": "nagahama-fes-2026",
+      "title": "長濱フェス2026",
+      "event_date": "2026-10-10",
+      "canva_design_id": "DAHXkJEvv44",
+      "status": "draft",
+      "caption": "",
+      "media_urls": [],
+      "content_hash": "",
+      "approved_hash": null,
+      "verification_status": "unverified",
+      "notes": "Canva source linked; caption and export media not yet verified. Do not publish."
+    },
+    {
+      "id": "shuiiku-seminar-2026",
+      "title": "酒育の会 テイスティング技術向上セミナー",
+      "event_date": "2026-10-10",
+      "canva_design_id": "DAHXj_vGVZM",
+      "status": "draft",
+      "caption": "",
+      "media_urls": [],
+      "content_hash": "",
+      "approved_hash": null,
+      "verification_status": "unverified",
+      "notes": "Canva source linked; caption and export media not yet verified. Do not publish."
+    },
+    {
+      "id": "nagahama-special-2026",
+      "title": "長濱蒸溜所 特別テイスティングセミナー",
+      "event_date": "2026-10-12",
+      "canva_design_id": "DAHXkEaVVUE",
+      "status": "draft",
+      "caption": "",
+      "media_urls": [],
+      "content_hash": "",
+      "approved_hash": null,
+      "verification_status": "unverified",
+      "notes": "Canva source linked; caption and export media not yet verified. Do not publish."
+    },
+    {
+      "id": "utsunomiya-marche-2026",
+      "title": "Utsunomiya Spirits Marche プチ3",
+      "event_date": "2026-10-24",
+      "canva_design_id": "DAHXkAREXXw",
+      "status": "draft",
+      "caption": "",
+      "media_urls": [],
+      "content_hash": "",
+      "approved_hash": null,
+      "verification_status": "unverified",
+      "notes": "Canva source linked; caption and export media not yet verified. Do not publish."
+    },
+    {
+      "id": "niseko-seminar-2026",
+      "title": "八海醸造 ニセコ蒸留所セミナー",
+      "event_date": "2026-10-25",
+      "canva_design_id": "DAHXj_vu6eg",
+      "status": "draft",
+      "caption": "",
+      "media_urls": [],
+      "content_hash": "",
+      "approved_hash": null,
+      "verification_status": "unverified",
+      "notes": "Canva source linked; caption and export media not yet verified. Do not publish."
+    }
+  ]
 }
