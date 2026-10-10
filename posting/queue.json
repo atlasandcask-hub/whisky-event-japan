@@ -15,7 +15,19 @@
       "verification_status": "needs_official_recheck",
       "notes": "Canva画像は未書き出し。公式情報の変更・受付終了を再確認すること",
       "official_url": "https://www.romanbeer.com/nagahama-fes/",
-      "story_url": "https://www.romanbeer.com/nagahama-fes/"
+      "story_url": "https://www.romanbeer.com/nagahama-fes/",
+      "canva_page_count": 4,
+      "canva_dimensions": {
+        "width": 1080,
+        "height": 1350
+      },
+      "media_export_status": "not_exported",
+      "official_check_status": "pending",
+      "approval_ready": false,
+      "review_blockers": [
+        "Official event status not reverified",
+        "Four full-resolution Canva pages not exported to stable media URLs"
+      ]
     },
     {
       "id": "shuiiku-seminar-2026",
@@ -30,7 +42,19 @@
       "verification_status": "needs_official_recheck",
       "notes": "Canva画像は未書き出し。公式情報の変更・受付終了を再確認すること",
       "official_url": "https://shuiku.jp/news/20455",
-      "story_url": "https://shuiku.jp/news/20455"
+      "story_url": "https://shuiku.jp/news/20455",
+      "canva_page_count": 4,
+      "canva_dimensions": {
+        "width": 1080,
+        "height": 1350
+      },
+      "media_export_status": "not_exported",
+      "official_check_status": "pending",
+      "approval_ready": false,
+      "review_blockers": [
+        "Official event status not reverified",
+        "Four full-resolution Canva pages not exported to stable media URLs"
+      ]
     },
     {
       "id": "nagahama-special-2026",
@@ -45,7 +69,20 @@
       "verification_status": "needs_official_recheck",
       "notes": "Canva保存版は定員20名のまま。修正確定まで公開禁止",
       "official_url": "https://prtimes.jp/main/html/rd/p/000000145.000145570.html",
-      "story_url": "https://prtimes.jp/main/html/rd/p/000000145.000145570.html"
+      "story_url": "https://prtimes.jp/main/html/rd/p/000000145.000145570.html",
+      "canva_page_count": 4,
+      "canva_dimensions": {
+        "width": 1080,
+        "height": 1350
+      },
+      "media_export_status": "not_exported",
+      "official_check_status": "pending",
+      "approval_ready": false,
+      "review_blockers": [
+        "Official event status not reverified",
+        "Four full-resolution Canva pages not exported to stable media URLs",
+        "Canva still shows incorrect capacity: 20"
+      ]
     },
     {
       "id": "utsunomiya-marche-2026",
@@ -60,7 +97,19 @@
       "verification_status": "needs_official_recheck",
       "notes": "Canva画像は未書き出し。公式情報の変更・受付終了を再確認すること",
       "official_url": "https://tatekawaya.com/products/detail/965",
-      "story_url": "https://tatekawaya.com/products/detail/965"
+      "story_url": "https://tatekawaya.com/products/detail/965",
+      "canva_page_count": 4,
+      "canva_dimensions": {
+        "width": 1080,
+        "height": 1350
+      },
+      "media_export_status": "not_exported",
+      "official_check_status": "pending",
+      "approval_ready": false,
+      "review_blockers": [
+        "Official event status not reverified",
+        "Four full-resolution Canva pages not exported to stable media URLs"
+      ]
     },
     {
       "id": "niseko-seminar-2026",
@@ -75,7 +124,20 @@
       "verification_status": "needs_official_recheck",
       "notes": "Canva画像は未書き出し。公式情報の変更・受付終了を再確認すること",
       "official_url": "https://www.bartender.or.jp/2026/10/22623",
-      "story_url": "https://www.bartender.or.jp/2026/10/22623"
+      "story_url": "https://www.bartender.or.jp/2026/10/22623",
+      "canva_page_count": 4,
+      "canva_dimensions": {
+        "width": 1080,
+        "height": 1440
+      },
+      "media_export_status": "not_exported",
+      "official_check_status": "pending",
+      "approval_ready": false,
+      "review_blockers": [
+        "Official event status not reverified",
+        "Four full-resolution Canva pages not exported to stable media URLs",
+        "Resize Canva from 1080x1440 to 1080x1350"
+      ]
     }
   ]
 }
