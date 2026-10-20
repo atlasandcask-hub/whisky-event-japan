@@ -157,7 +157,8 @@
     "category": "限定販売",
     "venue": "高島屋・13店舗（日本橋・新宿・柏・FMおおたかの森ほか）",
     "price": "各17,600円（税込、700ml）",
-    "url": "https://www.takashimaya.co.jp/store/special/suntory/"
+    "url": "https://www.takashimaya.co.jp/store/special/suntory/",
+    "ticketUrl": "https://www.takashimaya.co.jp/store/special/suntory/"
   },
   {
     "title": "グレンフィディック16年 アストンマーティンデザイン2026 大阪先行提供・ゲストバー",
@@ -287,7 +288,8 @@
     "category": "フェス",
     "venue": "東京国際フォーラム ホールE",
     "price": "プレミアムナイト3,500円／各部5,000円",
-    "url": "https://whiskyfestival.jp/"
+    "url": "https://whiskyfestival.jp/tokyo2026/",
+    "ticketUrl": "https://whiskyfestival.jp/tokyo2026/tickets/"
   },
   {
     "title": "ウイスキーフェスティバル2026 in 東京 記念限定ボトル5種 抽選販売",
@@ -297,7 +299,8 @@
     "category": "限定販売",
     "venue": "東京国際フォーラム ホールE（販売申込はオンライン）",
     "price": "16,500〜44,000円／送料・代引手数料別",
-    "url": "https://whiskyfestival.jp/tokyo2026/pickup/#16842"
+    "url": "https://whiskyfestival.jp/tokyo2026/pickup/#16842",
+    "ticketUrl": "https://whiskyfestival.jp/tokyo2026/tickets/"
   },
   {
     "title": "小諸蒸留所 KOMORO = KANPAI ファーストリリース記念イベント",
@@ -337,7 +340,8 @@
     "category": "セミナー",
     "venue": "六本木ウイスキーサロン（港区六本木6-7-17）",
     "price": "5,000円（税込）",
-    "url": "https://prtimes.jp/main/html/rd/p/000000149.000145570.html"
+    "url": "https://prtimes.jp/main/html/rd/p/000000149.000145570.html",
+    "ticketUrl": "https://docs.google.com/forms/d/1dc4VfH2drL0Q55fyT1sre4tAsycSjHqmT4OPswl1pV8/viewform"
   },
   {
     "title": "津貫蒸溜所祭り2026",
@@ -397,7 +401,8 @@
     "category": "試飲会",
     "venue": "ホテルモントレ仙台 3F 翠鳴館（〒980-0021 宮城県仙台市青葉区中央4-1-8）",
     "price": "各部4,000円（税込）",
-    "url": "https://www.vinetbonheur.com/view/item/000000013218"
+    "url": "https://www.vinetbonheur.com/view/item/000000013218",
+    "ticketUrl": "https://www.vinetbonheur.com/view/item/000000013218"
   },
   {
     "title": "LAGG WHISKY PAIRING DINNER",
@@ -487,7 +492,8 @@
     "category": "フェス",
     "venue": "ホテルブエナビスタ 3F グランデ",
     "price": "5,000円",
-    "url": "https://whiskyfestival.jp/matsumoto2027/tickets/"
+    "url": "https://whiskyfestival.jp/matsumoto2027/tickets/",
+    "ticketUrl": "https://whiskyfestival.jp/matsumoto2027/tickets/"
   },
   {
     "title": "土屋守が語るウイスキーの現在と未来 in 名古屋",
