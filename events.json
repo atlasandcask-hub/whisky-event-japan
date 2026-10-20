@@ -18,7 +18,8 @@
     "category": "限定販売",
     "venue": "国内取扱酒販店（店舗・在庫未確認）",
     "price": "参考小売価格12,320円（税込、700ml）",
-    "url": "https://prtimes.jp/main/html/rd/p/000000013.000155939.html"
+    "url": "https://prtimes.jp/main/html/rd/p/000000013.000155939.html",
+    "publicDescription": "熟成年数の透明性をテーマにしたコンパスボックスの限定ウイスキーです。世界限定3,610本のリリースで、国内では取扱酒販店を通じて販売されます。"
   },
   {
     "title": "伊勢丹浦和店 駒ヶ岳・津貫蒸溜所フェア（シングルカスク含む限定セット）",
@@ -50,7 +51,8 @@
     "category": "限定販売",
     "venue": "日本橋三越本店 本館地下1階 ラ・カーヴ（受取）",
     "price": "31,900円（税込、2本セット）",
-    "url": "https://www.mistore.jp/store/nihombashi/shops/foods/liquor/shopnews_list/shopnews000413.html"
+    "url": "https://www.mistore.jp/store/nihombashi/shops/foods/liquor/shopnews_list/shopnews000413.html",
+    "publicDescription": "山崎12年と響 BLOSSOM HARMONY 2026を組み合わせた限定12セットの抽選販売です。エムアイカード会員が対象で、当選後は日本橋三越本店で受け取る方式です。"
   },
   {
     "title": "WHISKY MEW『コン・バトラーV』グレンロッシー2015抽選",
@@ -60,7 +62,8 @@
     "category": "限定販売",
     "venue": "WHISKY MEW（抽選・国内配送）",
     "price": "16,500円（税込）",
-    "url": "https://whiskymew.jp/items/2026/com-battlerV/lottery-com-battlerV.html"
+    "url": "https://whiskymew.jp/items/2026/com-battlerV/lottery-com-battlerV.html",
+    "publicDescription": "アニメ『超電磁ロボ コン・バトラーV』のラベルを採用したグレンロッシー2015の抽選販売です。WHISKY MEW会員向けに応募を受け付けます。"
   },
   {
     "title": "第7回 TWSC受賞ボトル テイスティングワークショップ",
@@ -70,7 +73,8 @@
     "category": "セミナー",
     "venue": "ウイスキー文化研究所 セミナールーム",
     "price": "5,000円",
-    "url": "https://scotchclub.org/eventseminar/"
+    "url": "https://scotchclub.org/eventseminar/",
+    "publicDescription": "東京ウイスキー＆スピリッツコンペティションの受賞ボトルをテーマにしたテイスティング講座です。ウイスキーや麦焼酎を試飲しながら受賞銘柄の特徴を学びます。"
   },
   {
     "title": "LAND ROVER CHEERS 78 静岡蒸溜所出展",
@@ -80,7 +84,8 @@
     "category": "その他",
     "venue": "富士宮市 LAND ROVER CHEERS 78会場",
     "price": "公式で確認",
-    "url": "https://www.gaiaflow.co.jp/blog/event/48543"
+    "url": "https://www.gaiaflow.co.jp/blog/event/48543",
+    "publicDescription": "富士宮で開催されるLAND ROVER CHEERS 78に静岡蒸溜所が出展します。会場ではウイスキーのショット提供やボトル販売が予定されています。"
   },
   {
     "title": "テイスティング技術向上セミナー",
@@ -90,7 +95,8 @@
     "category": "セミナー",
     "venue": "酒育の会 神楽坂ラウンジ",
     "price": "会員4,000円／一般6,600円",
-    "url": "https://shuiku.jp/news/20455"
+    "url": "https://shuiku.jp/news/20455",
+    "publicDescription": "ブラインドテイスティングを通じて香りや味わいを見極める力を磨く少人数制セミナーです。酒育の会の神楽坂ラウンジで開催されます。"
   },
   {
     "title": "長濱フェス2026",
@@ -100,7 +106,8 @@
     "category": "蒸溜所",
     "venue": "えきまちテラス長浜",
     "price": "公式で確認",
-    "url": "https://www.ekimachinagahama.com/2026/10/07/11424/"
+    "url": "https://www.ekimachinagahama.com/2026/10/07/11424/",
+    "publicDescription": "長濱蒸溜所に関連した年に一度のイベントです。長浜の会場でウイスキーやビールなどを楽しめる企画です。"
   },
   {
     "title": "TOYAMAウイスキーフェス vol.4",
@@ -110,7 +117,8 @@
     "category": "フェス",
     "venue": "YKK AP ARENA",
     "price": "前売5,000円／当日5,500円",
-    "url": "https://toyamawhiskyfestival.jp/"
+    "url": "https://toyamawhiskyfestival.jp/",
+    "publicDescription": "富山で開催されるウイスキーフェスティバルです。国内外の多数の銘柄が集まり、無料試飲と有料試飲を楽しめます。"
   },
   {
     "title": "三郎丸 ホリデーコレクション2026 100セット限定抽選・販売",
@@ -120,7 +128,8 @@
     "category": "限定販売",
     "venue": "大正蔵ショップ／三郎丸コミュニティ（オンライン抽選）",
     "price": "59,400円（税込）",
-    "url": "https://prtimes.jp/main/html/rd/p/000000202.000031708.html"
+    "url": "https://prtimes.jp/main/html/rd/p/000000202.000031708.html",
+    "publicDescription": "三郎丸蒸留所の過去・現在・未来を30mlボトル24本で楽しめる限定セットです。未発売のシングルカスク4種類を含み、100セット限定で販売されます。"
   },
   {
     "title": "飛騨高山蒸溜所 10月見学会",
@@ -130,7 +139,8 @@
     "category": "蒸溜所",
     "venue": "飛騨高山蒸溜所",
     "price": "一般見学1,500円／再訪者向け1,000円（税込）",
-    "url": "https://www.whisky-hida.com/%E3%80%9010%E6%9C%88%E5%88%86%E8%A6%8B%E5%AD%A6%E4%BC%9A%E9%96%8B%E5%82%AC%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91-2/"
+    "url": "https://www.whisky-hida.com/%E3%80%9010%E6%9C%88%E5%88%86%E8%A6%8B%E5%AD%A6%E4%BC%9A%E9%96%8B%E5%82%AC%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91-2/",
+    "publicDescription": "飛騨高山蒸溜所の製造現場を見学できるイベントです。一般向けと再訪者向けの見学枠があり、参加者限定の売店も用意されます。"
   },
   {
     "title": "岡山蒸溜所15周年 シングルモルト岡山トリプルカスク 抽選販売（既存PX企画の別商品）",
@@ -151,7 +161,8 @@
     "category": "バー",
     "venue": "BAR 新宿 ウイスキーサロン",
     "price": "5,000円",
-    "url": "https://prtimes.jp/main/html/rd/p/000000145.000145570.html"
+    "url": "https://prtimes.jp/main/html/rd/p/000000145.000145570.html",
+    "publicDescription": "長濱蒸溜所のチーフブレンダー屋久佑輔氏を迎える特別セミナーです。複数のウイスキーを試飲しながらブレンディングや製造の魅力に触れられます。"
   },
   {
     "title": "高島屋 山崎・白州 Story of the Distillery 2026 アプリ抽選",
@@ -184,7 +195,8 @@
     "category": "酒販店",
     "venue": "こみや酒店（埼玉県川口市小谷場512-3）",
     "price": "無料",
-    "url": "https://www.komiyasaketen.co.jp/view/news/20260926191440"
+    "url": "https://www.komiyasaketen.co.jp/view/news/20260926191440",
+    "publicDescription": "アイルランドのクロナキルティ蒸溜所のブランドアンバサダーが来店する試飲販売会です。こみや酒店で蒸溜所の製品を無料で試飲できます。"
   },
   {
     "title": "ROYAL BRACKLA セミナー＆テイスティング",
@@ -194,7 +206,8 @@
     "category": "セミナー",
     "venue": "ANAクラウンプラザホテルグランコート名古屋 30F バー スターゲイト",
     "price": "公式で確認",
-    "url": "https://area.jaf.or.jp/area/2026/08/chubu/aichi/events/royal-brackla-tasting"
+    "url": "https://area.jaf.or.jp/area/2026/08/chubu/aichi/events/royal-brackla-tasting",
+    "publicDescription": "ロイヤルブラックラのウイスキーをテーマにしたセミナーとテイスティング企画です。名古屋のホテル内バーで開催されます。"
   },
   {
     "title": "キルホーマン蒸溜所 ピーター・ウィルズ氏 来日無料試飲販売イベント",
@@ -204,7 +217,8 @@
     "category": "酒販店",
     "venue": "こみや酒店（埼玉県川口市小谷場512-3）",
     "price": "無料",
-    "url": "https://www.komiyasaketen.co.jp/view/news/20260921203333"
+    "url": "https://www.komiyasaketen.co.jp/view/news/20260921203333",
+    "publicDescription": "キルホーマン蒸溜所のピーター・ウィルズ氏が来店する無料試飲販売イベントです。別途予約制の有料セミナーも企画されています。"
   },
   {
     "title": "American Craftsmanship Session by Jack Daniel’s",
@@ -247,7 +261,8 @@
     "category": "試飲会",
     "venue": "Tasting space TATEKAWAYA",
     "price": "1,000円",
-    "url": "https://tatekawaya.com/products/detail/965"
+    "url": "https://tatekawaya.com/products/detail/965",
+    "publicDescription": "宇都宮のTasting space TATEKAWAYAで開催されるスピリッツの試飲イベントです。少人数の催しとしてウイスキーなどを楽しめます。"
   },
   {
     "title": "八海醸造ニセコ蒸留所 ウイスキー・クラフトジン バーテンダーズセミナー",
@@ -257,7 +272,8 @@
     "category": "セミナー",
     "venue": "札幌コンファレンスホールB",
     "price": "無料",
-    "url": "https://www.bartender.or.jp/2026/10/22623"
+    "url": "https://www.bartender.or.jp/2026/10/22623",
+    "publicDescription": "八海醸造ニセコ蒸留所のクラフトジンやウイスキーづくりを紹介するバーテンダー向けセミナーです。蒸留所の紹介や製造工程の解説、テイスティングが予定されています。"
   },
   {
     "title": "日置・嘉之助 蒸溜祭 2026",
@@ -267,7 +283,8 @@
     "category": "蒸溜所",
     "venue": "嘉之助蒸溜所・日置蒸溜蔵",
     "price": "入場無料（一部有料）",
-    "url": "https://kanosuke.com/blogs/explore-kanosuke/festival2026"
+    "url": "https://kanosuke.com/blogs/explore-kanosuke/festival2026",
+    "publicDescription": "嘉之助蒸溜所と日置蒸溜蔵を舞台に開催される蒸溜祭です。蒸溜所ならではの企画や限定ボトルの抽選・販売が予定されています。"
   },
   {
     "title": "バランタイン シングルモルト グレンバーギー16年・21年 数量限定発売",
@@ -277,7 +294,8 @@
     "category": "限定販売",
     "venue": "全国の販売店（取扱店舗未確認）",
     "price": "16年15,750円／21年24,750円（ともに税別希望小売価格）",
-    "url": "https://www.suntory.co.jp/news/article/2026/15140.html"
+    "url": "https://www.suntory.co.jp/news/article/2026/15140.html",
+    "publicDescription": "バランタインのキーモルトとして知られるグレンバーギーから、16年と21年のシングルモルトが数量限定で登場します。それぞれ異なる熟成の魅力を楽しめる商品です。"
   },
   {
     "title": "ラフロイグ 14年 WILLEM DAFOE EC限定・数量限定発売",
@@ -287,7 +305,8 @@
     "category": "限定販売",
     "venue": "Amazon・楽天・Yahoo!（オンライン販売）",
     "price": "22,750円（税込、700ml）",
-    "url": "https://prtimes.jp/main/html/rd/p/000000041.000119510.html"
+    "url": "https://prtimes.jp/main/html/rd/p/000000041.000119510.html",
+    "publicDescription": "俳優ウィレム・デフォーとの共同開発によるラフロイグ14年の限定商品です。オンライン販売を中心に展開される数量限定リリースです。"
   },
   {
     "title": "ウイスキーフェスティバル2026 in 東京",
@@ -321,7 +340,8 @@
     "category": "蒸溜所",
     "venue": "小諸蒸留所ほかサテライト会場",
     "price": "各プログラムによる",
-    "url": "https://komoro-first-release.com/"
+    "url": "https://komoro-first-release.com/",
+    "publicDescription": "小諸蒸留所の初リリースを祝う記念イベントです。蒸留所やサテライト会場で、ウイスキーに関連するさまざまなプログラムが予定されています。"
   },
   {
     "title": "小諸蒸留所 KOMORO FIRST RELEASE WEEK",
@@ -331,7 +351,8 @@
     "category": "蒸溜所",
     "venue": "小諸蒸留所・小諸市内各所",
     "price": "各プログラムによる",
-    "url": "https://komoro-first-release.com/"
+    "url": "https://komoro-first-release.com/",
+    "publicDescription": "小諸蒸留所のファーストリリースを記念するイベント週間です。小諸市内の会場でウイスキーにまつわる催しが開催されます。"
   },
   {
     "title": "第72回 Red rose Whisky Seminar（サントリー・阿波乃蒸溜所）",
@@ -341,7 +362,8 @@
     "category": "セミナー",
     "venue": "未確認",
     "price": "15,000円（税込）",
-    "url": "https://bar-sawa.net/redrose/seminar/"
+    "url": "https://bar-sawa.net/redrose/seminar/",
+    "publicDescription": "サントリーや阿波乃蒸溜所をテーマにしたRed rose Whisky Seminarの第72回です。講演とテイスティングを通じてウイスキーの魅力を学べます。"
   },
   {
     "title": "新道蒸留所 未発売カスク・7種テイスティングセミナー",
@@ -352,7 +374,8 @@
     "venue": "六本木ウイスキーサロン（港区六本木6-7-17）",
     "price": "5,000円（税込）",
     "url": "https://prtimes.jp/main/html/rd/p/000000149.000145570.html",
-    "ticketUrl": "https://docs.google.com/forms/d/1dc4VfH2drL0Q55fyT1sre4tAsycSjHqmT4OPswl1pV8/viewform"
+    "ticketUrl": "https://docs.google.com/forms/d/1dc4VfH2drL0Q55fyT1sre4tAsycSjHqmT4OPswl1pV8/viewform",
+    "publicDescription": "新道蒸留所の未発売カスクを含む7種類を試飲できる特別セミナーです。六本木のウイスキーサロンで原酒の個性を体験できます。"
   },
   {
     "title": "津貫蒸溜所祭り2026",
@@ -362,7 +385,8 @@
     "category": "蒸溜所",
     "venue": "本坊酒造 津貫蒸溜所 特設会場・旧津貫小学校",
     "price": "公式で確認",
-    "url": "https://prtimes.jp/main/html/rd/p/000000079.000121144.html"
+    "url": "https://prtimes.jp/main/html/rd/p/000000079.000121144.html",
+    "publicDescription": "本坊酒造の津貫蒸溜所で開催される蒸溜所祭りです。蒸溜所の開設10周年を記念した限定ボトルなどが注目されます。"
   },
   {
     "title": "第1回 枕崎ウイスキー祭り・火の神蒸溜所 限定ボトル564本",
@@ -372,7 +396,8 @@
     "category": "蒸溜所",
     "venue": "火の神蒸溜所・ビジターセンター",
     "price": "会場コイン200円／セミナー3,000円／限定ボトル5,500円（税込）",
-    "url": "https://makurazaki-whisky-matsuri.com/"
+    "url": "https://makurazaki-whisky-matsuri.com/",
+    "publicDescription": "鹿児島県枕崎市の火の神蒸溜所で開催されるウイスキー祭りです。限定564本の記念ボトル販売や、テイスティング付きセミナーが企画されています。"
   },
   {
     "title": "ザ・グレンタレット ウイスキーセミナー",
@@ -382,7 +407,8 @@
     "category": "セミナー",
     "venue": "ANAインターコンチネンタルホテル東京 メインバー ダビンチ",
     "price": "40,000円",
-    "url": "https://anaintercontinental-tokyo.jp/offer/davinci-20261111/"
+    "url": "https://anaintercontinental-tokyo.jp/offer/davinci-20261111/",
+    "publicDescription": "ザ・グレンタレットのウイスキーをテーマにしたホテルバーでの特別セミナーです。銘柄の魅力を学びながらテイスティングを楽しめます。"
   },
   {
     "title": "ロッホローモンド スペシャルセミナー",
@@ -392,7 +418,8 @@
     "category": "セミナー",
     "venue": "ウイスキー文化研究所 セミナールーム",
     "price": "5,500円",
-    "url": "https://scotchclub.org/eventseminar/"
+    "url": "https://scotchclub.org/eventseminar/",
+    "publicDescription": "ロッホローモンドのウイスキーを深く知るためのスペシャルセミナーです。ブランドの製造やブレンドの特徴に触れられる講座です。"
   },
   {
     "title": "静岡ウイスキースクール 1日入門コース",
@@ -402,7 +429,8 @@
     "category": "蒸溜所",
     "venue": "静岡蒸溜所",
     "price": "3,000円",
-    "url": "https://shizuoka-distillery.jp/whisky-school-introductorycourse/"
+    "url": "https://shizuoka-distillery.jp/whisky-school-introductorycourse/",
+    "publicDescription": "静岡蒸溜所でウイスキーづくりの基礎を学ぶ1日入門コースです。蒸溜所ならではの環境で製造工程への理解を深められます。"
   },
   {
     "title": "Drink Up!! SENDAI Wine & Whisky FES 2026 ～仙台で乾杯!!～",
@@ -424,7 +452,8 @@
     "category": "バー",
     "venue": "STELLAR WORKS Restaurant & Bar",
     "price": "7,000円",
-    "url": "https://whisk-e.co.jp/news/laggdinner2026/"
+    "url": "https://whisk-e.co.jp/news/laggdinner2026/",
+    "publicDescription": "ラグ蒸溜所のウイスキーと料理の組み合わせを楽しむペアリングディナーです。特別なシングルカスクを含むテイスティングが予定されています。"
   },
   {
     "title": "第5回 山鹿蒸溜所まつり2026",
@@ -434,7 +463,8 @@
     "category": "蒸溜所",
     "venue": "山鹿蒸溜所敷地内",
     "price": "公式で確認",
-    "url": "https://yamagadistillery.co.jp/news/973/"
+    "url": "https://yamagadistillery.co.jp/news/973/",
+    "publicDescription": "熊本県の山鹿蒸溜所で開催される蒸溜所まつりです。蒸溜所の雰囲気を楽しみながらウイスキーに親しめるイベントです。"
   },
   {
     "title": "山崎 リフィルスパニッシュオーク 数量限定発売",
@@ -444,7 +474,8 @@
     "category": "限定販売",
     "venue": "全国の販売店（取扱店舗未確認）",
     "price": "27,000円（税別・希望小売価格）",
-    "url": "https://www.suntory.co.jp/news/article/2026/15136.html"
+    "url": "https://www.suntory.co.jp/news/article/2026/15136.html",
+    "publicDescription": "山崎のリフィルスパニッシュオーク樽で熟成した原酒を使用する数量限定ウイスキーです。華やかな香りと穏やかな木の香りを特徴とするリリースです。"
   },
   {
     "title": "静岡ウイスキースクール 製造初級コース",
@@ -454,7 +485,8 @@
     "category": "蒸溜所",
     "venue": "静岡蒸溜所",
     "price": "34,980円／35歳以下19,800円",
-    "url": "https://shizuoka-distillery.jp/whiskyschool/"
+    "url": "https://shizuoka-distillery.jp/whiskyschool/",
+    "publicDescription": "静岡蒸溜所でウイスキー製造の工程をより詳しく学ぶ初級コースです。実際の蒸溜所で専門的な知識に触れられる講座です。"
   },
   {
     "title": "山崎蒸溜所ものづくりツアー 2026年12月分 抽選受付",
@@ -464,7 +496,8 @@
     "category": "蒸溜所",
     "venue": "サントリー山崎蒸溜所",
     "price": "有料",
-    "url": "https://www.suntory.co.jp/factory/yamazaki/news/detail/post_4.html"
+    "url": "https://www.suntory.co.jp/factory/yamazaki/news/detail/post_4.html",
+    "publicDescription": "サントリー山崎蒸溜所の12月開催分の見学ツアーです。ウイスキーづくりの現場を見学できる人気プログラムで、参加は事前抽選制です。"
   },
   {
     "title": "白州蒸溜所 2026年12月ツアー 抽選受付",
@@ -474,7 +507,8 @@
     "category": "蒸溜所",
     "venue": "サントリー白州蒸溜所",
     "price": "有料",
-    "url": "https://www.suntory.co.jp/factory/hakushu/news/detail/post_6.html"
+    "url": "https://www.suntory.co.jp/factory/hakushu/news/detail/post_6.html",
+    "publicDescription": "サントリー白州蒸溜所の12月開催分の見学ツアーです。自然に囲まれた蒸溜所で製造工程を体験でき、参加は事前抽選制です。"
   },
   {
     "title": "長濱蒸溜所 ジャパニーズウイスキートレイル 旅するセミナー",
@@ -484,7 +518,8 @@
     "category": "セミナー",
     "venue": "ウイスキー文化研究所 セミナールーム",
     "price": "5,500円",
-    "url": "https://scotchclub.org/eventseminar/"
+    "url": "https://scotchclub.org/eventseminar/",
+    "publicDescription": "長濱蒸溜所のジャパニーズウイスキートレイルをテーマにした旅するセミナーです。ウイスキーを通じて各地の魅力に触れられます。"
   },
   {
     "title": "SUNTORY WHISKY 碧Ao〈SCOTCH EDITION〉数量限定発売",
@@ -494,7 +529,8 @@
     "category": "限定販売",
     "venue": "全国酒販店（取扱店舗未確認）",
     "price": "希望小売価格6,000円（税別、700ml）",
-    "url": "https://www.suntory.co.jp/news/article/2026/15147.html"
+    "url": "https://www.suntory.co.jp/news/article/2026/15147.html",
+    "publicDescription": "サントリーのブレンデッドウイスキー碧Aoから、スコッチの個性を強調した数量限定エディションが登場します。スモーキーで複雑な味わいが特徴です。"
   },
   {
     "title": "ウイスキーフェスティバル2027 in 松本",
@@ -516,6 +552,7 @@
     "category": "セミナー",
     "venue": "リファレンス名古屋栄貸会議室SK902（名古屋市中区栄3-18-1 ナディアパーク9F）",
     "price": "5,000円（税込）",
-    "url": "https://scotchclub.org/eventseminar/tsuchiyamamorunagoyaseminaar/"
+    "url": "https://scotchclub.org/eventseminar/tsuchiyamamorunagoyaseminaar/",
+    "publicDescription": "土屋守氏がウイスキーの現在と未来を語る名古屋開催のセミナーです。ウイスキー業界の動向やこれからの可能性について学べます。"
   }
 ]
