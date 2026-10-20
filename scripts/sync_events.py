@@ -81,8 +81,11 @@ def main():
         notes = (row.get("備考") or "").strip()
 
         events.append({
+            "id": event_id,
             "title": name,
             "date": event_date,
+            "addedAt": (row.get("最終更新日") or row.get("確認日") or "").strip().replace("/", "-"),
+            "imageUrl": (row.get("画像URL") or "").strip() if (row.get("画像URL") or "").strip().startswith("https://") else "",
             "dateLabel": raw_date,
             "region": (row.get("都道府県") or "").strip(),
             "category": (row.get("カテゴリ") or "その他").strip(),
