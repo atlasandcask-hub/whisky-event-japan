@@ -91,7 +91,7 @@ def main():
             "category": (row.get("カテゴリ") or "その他").strip(),
             "venue": (row.get("会場") or "公式で確認").strip(),
             "price": (row.get("料金") or "公式で確認").strip(),
-            "publicDescription": (row.get("公開用説明") or "").strip(),
+            "publicDescription": (row.get("公開用説明") or "").strip() or old.get("publicDescription", ""),
             "ticketUrl": ((row.get("チケットURL") or "").strip() or old.get("ticketUrl", "")) if ((row.get("チケットURL") or "").strip() or old.get("ticketUrl", "")).startswith("https://") else "",
             "url": url
         })
