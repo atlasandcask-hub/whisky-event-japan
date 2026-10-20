@@ -91,8 +91,7 @@ def main():
             "category": (row.get("カテゴリ") or "その他").strip(),
             "venue": (row.get("会場") or "公式で確認").strip(),
             "price": (row.get("料金") or "公式で確認").strip(),
-            "description": old.get("description") or
-                "。".join(filter(None, [status, notes]))[:180],
+            "description": "。".join(filter(None, [status, re.split(r"Canva完成|Canva：|Canva:|WEJ-CAND-|イベントDB掲載|GitHub/Webサイト変更なし|情報発表日|新規発見|新規把握", notes)[0]]))[:180],
             "ticketUrl": (row.get("チケットURL") or "").strip() if (row.get("チケットURL") or "").strip().startswith("https://") else "",
             "url": url
         })
