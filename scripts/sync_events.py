@@ -85,14 +85,14 @@ def main():
             "title": name,
             "date": event_date,
             "addedAt": (row.get("最終更新日") or row.get("確認日") or "").strip().replace("/", "-"),
-            "imageUrl": (row.get("画像URL") or "").strip() if (row.get("画像URL") or "").strip().startswith("https://") else "",
+            "imageUrl": ((row.get("画像URL") or "").strip() or old.get("imageUrl", "")) if ((row.get("画像URL") or "").strip() or old.get("imageUrl", "")).startswith("https://") else "",
             "dateLabel": raw_date,
             "region": (row.get("都道府県") or "").strip(),
             "category": (row.get("カテゴリ") or "その他").strip(),
             "venue": (row.get("会場") or "公式で確認").strip(),
             "price": (row.get("料金") or "公式で確認").strip(),
             "publicDescription": (row.get("公開用説明") or "").strip(),
-            "ticketUrl": (row.get("チケットURL") or "").strip() if (row.get("チケットURL") or "").strip().startswith("https://") else "",
+            "ticketUrl": ((row.get("チケットURL") or "").strip() or old.get("ticketUrl", "")) if ((row.get("チケットURL") or "").strip() or old.get("ticketUrl", "")).startswith("https://") else "",
             "url": url
         })
 
