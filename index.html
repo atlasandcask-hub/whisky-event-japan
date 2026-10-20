@@ -13,19 +13,20 @@ header,main,footer{max-width:1100px;margin:auto;padding:24px}header{display:flex
 .month{margin:36px 0 18px;border-bottom:1px solid var(--line);padding-bottom:14px;display:flex;align-items:baseline;gap:14px}.month h3{margin:0;font-size:24px}.month span{font-size:12px;color:#777;letter-spacing:.08em}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{min-width:0;overflow-wrap:anywhere;background:white;border:1px solid var(--line);border-radius:12px;padding:23px;display:flex;flex-direction:column;min-height:260px}.card.ended{background:#f0eee9;color:#777}.date{font-size:12px;color:var(--accent);font-weight:bold}.card h4{line-height:1.5;font-size:19px;margin:16px 0}.meta{font-size:13px;color:#777;line-height:1.7}.card p{font-size:13px;line-height:1.8;flex:1}.card a{font-weight:bold;text-decoration:none;border-top:1px solid var(--line);padding-top:14px;font-size:14px}.card.ended a{color:#777}.status{display:inline-block;font-size:11px;border-radius:999px;padding:5px 10px;font-weight:600;border:1px solid #d4cbbb;color:#635746;background:#f8f4ec}.status.live{color:#316849;background:#e9f5ec;border-color:#c6e2ce}.status.ended{color:#777;background:#e9e9e9;border-color:#ddd}.status.sold{color:#914444;background:#f8eaea;border-color:#edd0d0}.status.deadline{color:#805d27;background:#faf0d9;border-color:#e8d4aa}.card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.empty{padding:25px 0;color:#777}.note,footer{font-size:12px;color:#777;line-height:1.8}.note{margin:40px 0}footer{border-top:1px solid var(--line)}
 @media(max-width:800px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.cards,.controls{grid-template-columns:minmax(0,1fr)}.hero{padding:42px 0}.card{min-height:0}.month h3{font-size:21px}}
+.quick,.areas{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 22px}.quick button,.areas button{border:1px solid var(--line);background:white;border-radius:22px;padding:10px 14px;cursor:pointer}.quick button.active,.areas button.active{background:var(--ink);color:white}.card-photo{width:100%;height:160px;object-fit:cover;border-radius:8px;margin:0 0 14px}.photo-fallback{height:160px;background:linear-gradient(125deg,#e3d8c6,#f8f6ef);display:grid;place-items:center;font:24px serif;letter-spacing:.15em;color:#8e7656;margin-bottom:14px}.sort-row{display:flex;align-items:center;gap:12px;margin:14px 0}.sort-row select{max-width:250px}@media(max-width:600px){.sort-row{display:block}.sort-row select{max-width:none}}
 </style>
 </head>
 <body>
 <header><div><strong>WEJ</strong><small>WHISKY EVENT JAPAN</small></div><nav><a href="#events">イベントを探す</a></nav></header>
 <main><section class="hero"><div class="kicker">DISCOVER WHISKY EVENTS IN JAPAN</div><h1>全国のウイスキーイベントを、<br>もっと探しやすく。</h1><p>フェスティバル、蒸溜所イベント、試飲会、セミナー。<br>気になるイベントを見つけて、主催者の公式情報へ。</p><div class="bar"></div></section>
 <section id="events"><h2>EVENTS　<small id="count" style="font-size:13px;color:#777"></small></h2>
-<div class="controls"><input id="q" placeholder="イベント名・会場などで検索" aria-label="検索"><select id="region" aria-label="地域"><option value="">全国</option></select><select id="category" aria-label="カテゴリ"><option value="">すべてのカテゴリ</option></select></div>
+<h3>いつ行く？</h3><div id="quick" class="quick"><button data-period="today">今日</button><button data-period="tomorrow">明日</button><button data-period="weekend">今週末</button><button data-period="" class="active">すべて</button></div><h3>エリアから探す</h3><div id="areas" class="areas"><button data-area="" class="active">全国</button><button data-area="北海道・東北">北海道・東北</button><button data-area="関東">関東</button><button data-area="中部">中部</button><button data-area="近畿">近畿</button><button data-area="中国・四国">中国・四国</button><button data-area="九州・沖縄">九州・沖縄</button></div><div class="controls"><input id="q" placeholder="イベント名・会場などで検索" aria-label="検索"><select id="region" aria-label="地域"><option value="">全国</option></select><select id="category" aria-label="カテゴリ"><option value="">すべてのカテゴリ</option></select></div>
 <label class="options"><input type="checkbox" id="hideEnded" checked>終了したイベントを非表示にする</label>
-<div id="cards" aria-live="polite"></div>
+<div class="sort-row"><label for="sort">並び替え</label><select id="sort"><option value="date">開催日が近い順</option><option value="new">新着順</option><option value="recommended">おすすめ順</option><option value="popular">アクセスランキング</option></select></div><p id="sortNote" class="meta"></p><div id="cards" aria-live="polite"></div>
 <p class="note">イベント情報はWEJイベントDBをもとに更新しています。開催中・終了の判定は日本時間の日付に基づきます。完売や申込締切は情報登録時点の状態です。日時・料金・申込状況は変更される場合があります。必ず主催者の公式情報をご確認ください。掲載情報はイベント主催者による公認を意味しません。</p></section></main>
 <footer>© WHISKY EVENT JAPAN　｜　<a href="https://www.instagram.com/whiskyeventjapan/">Instagram @whiskyeventjapan</a></footer>
 <script>
-let all=[];const $=id=>document.getElementById(id);
+let all=[],periodFilter='',areaFilter='';const areaMap={'北海道・東北':'北海道 青森 岩手 宮城 秋田 山形 福島','関東':'茨城 栃木 群馬 埼玉 千葉 東京 神奈川','中部':'新潟 富山 石川 福井 山梨 長野 岐阜 静岡 愛知','近畿':'三重 滋賀 京都 大阪 兵庫 奈良 和歌山','中国・四国':'鳥取 島根 岡山 広島 山口 徳島 香川 愛媛 高知','九州・沖縄':'福岡 佐賀 長崎 熊本 大分 宮崎 鹿児島 沖縄'};const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const tokyoToday=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const toISO=(y,m,d)=>`${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
@@ -59,8 +60,8 @@ function status(e,today){
 }
 function render(){
  const today=tokyoToday(),q=$('q').value.toLowerCase(),r=$('region').value,c=$('category').value;
- let filtered=all.filter(e=>(!q||[e.title,e.venue,e.region].join(' ').toLowerCase().includes(q))&&(!r||e.region===r)&&(!c||e.category===c)&&(!$('hideEnded').checked||period(e).end>=today));
- filtered.sort((a,b)=>a.date.localeCompare(b.date)||a.title.localeCompare(b.title,'ja'));
+ const base=new Date(today+'T12:00:00+09:00'),iso=n=>{const d=new Date(base.getTime()+n*86400000);return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(d)},wd=base.getUTCDay(),sat=(6-wd+7)%7,days=periodFilter==='today'?[today]:periodFilter==='tomorrow'?[iso(1)]:periodFilter==='weekend'?[iso(sat),iso(sat+1)]:[];let filtered=all.filter(e=>(!areaFilter||areaMap[areaFilter].split(' ').some(x=>String(e.region).includes(x)))&&(!days.length||days.some(d=>period(e).start<=d&&period(e).end>=d))&&(!q||[e.title,e.venue,e.region].join(' ').toLowerCase().includes(q))&&(!r||e.region===r)&&(!c||e.category===c)&&(!$('hideEnded').checked||period(e).end>=today));
+ const sort=$('sort').value;const note=$('sortNote');note.textContent=sort==='popular'?'アクセス計測の準備中です。実測ランキングは計測開始後に表示します。':sort==='recommended'?'開催が近く、詳細情報が充実したイベントを優先表示しています。':'';filtered.sort((a,b)=>sort==='new'?(b.addedAt||b.date).localeCompare(a.addedAt||a.date):sort==='recommended'?(Number(!!b.imageUrl)+Number(!!b.description))-(Number(!!a.imageUrl)+Number(!!a.description))||a.date.localeCompare(b.date):a.date.localeCompare(b.date)||a.title.localeCompare(b.title,'ja'));
  $('count').textContent=filtered.length+'件';
  if(!filtered.length){$('cards').innerHTML='<p class="empty">該当するイベントがありません。</p>';return}
  const groups=new Map();for(const e of filtered){const key=e.date.slice(0,7);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(e)}
@@ -68,14 +69,14 @@ function render(){
   const [year,month]=key.split('-');
   return `<section class="month-group"><div class="month"><h3>${esc(year)}年${Number(month)}月</h3><span>${events.length}件</span></div><div class="cards">${events.map(e=>{
    const [label,kind]=status(e,today);
-   return `<article class="card ${kind==='ended'?'ended':''}"><div class="card-top"><div class="date">${esc(e.dateLabel||e.date)} ／ ${esc(e.category)}</div><span class="status ${kind}">${label}</span></div><h4>${esc(e.title)}</h4><div class="meta">${esc(e.region)}・${esc(e.venue)}<br>料金：${esc(e.price)}</div><p>${esc(e.description)}</p><a href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">公式情報・チケット ↗</a></article>`
+   return `<article class="card ${kind==='ended'?'ended':''}"><div class="card-top"><div class="date">${esc(e.dateLabel||e.date)} ／ ${esc(e.category)}</div><span class="status ${kind}">${label}</span></div>${e.imageUrl&&/^https:\/\//.test(e.imageUrl)?'<img class="card-photo" src="'+esc(e.imageUrl)+'" alt="" loading="lazy" onerror="this.outerHTML=\'<div class=photo-fallback>WEJ</div>\'">':'<div class="photo-fallback">WEJ</div>'}<h4>${esc(e.title)}</h4><div class="meta">${esc(e.region)}・${esc(e.venue)}<br>料金：${esc(e.price)}</div><p>${esc(e.description)}</p><a href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">公式情報・チケット ↗</a></article>`
   }).join('')}</div></section>`
  }).join('');
 }
 fetch('./events.json').then(r=>{if(!r.ok)throw Error('fetch failed');return r.json()}).then(d=>{
  if(!Array.isArray(d))throw Error('invalid events');all=d.filter(e=>/^\d{4}-\d{2}-\d{2}$/.test(e.date||''));
  for(const [id,key] of [['region','region'],['category','category']])for(const v of [...new Set(all.map(e=>e[key]).filter(Boolean))].sort())$(id).add(new Option(v,v));
- ['q','region','category','hideEnded'].forEach(id=>$(id).addEventListener(id==='q'?'input':'change',render));render();
+ $('quick').addEventListener('click',e=>{if(!e.target.matches('button'))return;periodFilter=e.target.dataset.period;document.querySelectorAll('#quick button').forEach(b=>b.classList.toggle('active',b===e.target));render()});$('areas').addEventListener('click',e=>{if(!e.target.matches('button'))return;areaFilter=e.target.dataset.area;document.querySelectorAll('#areas button').forEach(b=>b.classList.toggle('active',b===e.target));render()});$('sort').addEventListener('change',render);['q','region','category','hideEnded'].forEach(id=>$(id).addEventListener(id==='q'?'input':'change',render));render();
 }).catch(()=>{$('cards').textContent='イベントデータを読み込めませんでした。公開サーバーで確認してください。'});
 </script>
 </body>
