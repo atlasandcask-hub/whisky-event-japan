@@ -61,6 +61,7 @@ function status(e,today){
   if(p.start<=today)return ['開催中・実施期間','live'];
   return ['開催予定','upcoming'];
 }
+function publicDescription(value){let s=String(value||'');s=s.split(/(?:Canva完成|Canva：|Canva:|フィード[0-9０-９]*ページ目|ストーリーズ[0-9０-９]*ページ目|WEJ-CAND-|イベントDB掲載|GitHub\/Webサイト変更なし|情報発表日|新規発見|新規把握|未登録BAR企画発見|主催者の当該回の会場明記を確認できず未確認|登録済み)/)[0];s=s.replace(/https?:\/\/\S+/g,'').replace(/【(?:新規|既存|重要更新)[^】]*】/g,'').replace(/\b(?:WEJ-[A-Z0-9-]+)\b/g,'').replace(/(?:数量と残数未確認|当日時点の残数未確認|今回新規把握|確認時点で販売中表示を確認しました)/g,'').replace(/\s*\/\s*$/,'').trim();return s.replace(/[。／\s]+$/,'').trim()+(s&&!/[。！？]$/.test(s)?'。':'')}
 function render(){
  const today=tokyoToday(),q=$('q').value.toLowerCase(),r=$('region').value,c=$('category').value;
  const base=new Date(today+'T12:00:00+09:00'),iso=n=>{const d=new Date(base.getTime()+n*86400000);return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(d)},wd=base.getUTCDay(),sat=(6-wd+7)%7,days=periodFilter==='today'?[today]:periodFilter==='tomorrow'?[iso(1)]:periodFilter==='weekend'?[iso(sat),iso(sat+1)]:[];let filtered=all.filter(e=>(!areaFilter||areaMap[areaFilter].split(' ').some(x=>String(e.region).includes(x)))&&(!days.length||days.some(d=>period(e).start<=d&&period(e).end>=d))&&(!q||[e.title,e.venue,e.region].join(' ').toLowerCase().includes(q))&&(!r||e.region===r)&&(!c||e.category===c)&&(!$('hideEnded').checked||period(e).end>=today));
@@ -72,7 +73,7 @@ function render(){
   const [year,month]=key.split('-');
   return `<section class="month-group"><div class="month"><h3>${esc(year)}年${Number(month)}月</h3><span>${events.length}件</span></div><div class="cards">${events.map(e=>{
    const [label,kind]=status(e,today);
-   return `<article class="card ${kind==='ended'?'ended':''}"><div class="card-top"><div class="date">${esc(e.dateLabel||e.date)} ／ ${esc(e.category)}</div><span class="status ${kind}">${label}</span></div><details><summary><h4>${esc(e.title)}</h4></summary><div class="card-details"><div class="meta">${esc(e.region)}・${esc(e.venue)}<br>料金：${esc(e.price)}</div><p>${esc(e.description)}</p></div></details><div class="card-links"><a href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">公式ページ ↗</a>${e.ticketUrl&&/^https:\/\//.test(e.ticketUrl)?'<a href="'+esc(e.ticketUrl)+'" target="_blank" rel="noopener noreferrer">チケット・申込 ↗</a>':''}</div></article>`;
+   return `<article class="card ${kind==='ended'?'ended':''}"><div class="card-top"><div class="date">${esc(e.dateLabel||e.date)} ／ ${esc(e.category)}</div><span class="status ${kind}">${label}</span></div><details><summary><h4>${esc(e.title)}</h4></summary><div class="card-details"><div class="meta">${esc(e.region)}・${esc(e.venue)}<br>料金：${esc(e.price)}</div><p>${esc(publicDescription(e.description))}</p></div></details><div class="card-links"><a href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">公式ページ ↗</a>${e.ticketUrl&&/^https:\/\//.test(e.ticketUrl)?'<a href="'+esc(e.ticketUrl)+'" target="_blank" rel="noopener noreferrer">チケット・申込 ↗</a>':''}</div></article>`;
   }).join('')}</div></section>`
  }).join('');
 }
