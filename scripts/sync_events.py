@@ -93,6 +93,7 @@ def main():
             "price": (row.get("料金") or "公式で確認").strip(),
             "description": old.get("description") or
                 "。".join(filter(None, [status, notes]))[:180],
+            "ticketUrl": (row.get("チケットURL") or "").strip() if (row.get("チケットURL") or "").strip().startswith("https://") else "",
             "url": url
         })
 
