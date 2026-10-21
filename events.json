@@ -1,5 +1,20 @@
 [
   {
+    "id": "WEJ-2026-054",
+    "title": "ビックカメラ有楽町店25周年記念 希少ウイスキー抽選",
+    "date": "2026-09-04",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/09/04-10/25",
+    "region": "東京都",
+    "category": "限定販売",
+    "venue": "ビックカメラ有楽町店（アプリ申込、店頭酒類購入条件）",
+    "price": "響30年・山崎25年・白州25年各456,500円／山崎18年67,100円（税込）",
+    "publicDescription": "響30年、山崎25年、白州25年、山崎18年など抽選。期間中有楽町店で酒類税込3,000円以上購入したポイント会員対象。公式アプリから応募。9/4発表済を本日初検出。",
+    "ticketUrl": "",
+    "url": "https://www.biccamera.com/bc/c/campaign/yurakucho25th_liquor/"
+  },
+  {
     "id": "WEJ-2026-047",
     "title": "Royal Salute×バー オードヴィー『Enter a New Kingdom』期間限定プロモーション",
     "date": "2026-10-01",
@@ -28,6 +43,21 @@
     "publicDescription": "熟成年数の透明性をテーマにしたコンパスボックスの限定ウイスキーです。世界限定3,610本のリリースで、国内では取扱酒販店を通じて販売されます。",
     "ticketUrl": "",
     "url": "https://prtimes.jp/main/html/rd/p/000000013.000155939.html"
+  },
+  {
+    "id": "WEJ-2026-056",
+    "title": "ロッテ免税店東京銀座店 山崎25年ミズナラ購入権 第10弾抽選",
+    "date": "2026-10-05",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/10/05-11/01（週ごとに抽選）",
+    "region": "東京都",
+    "category": "限定販売",
+    "venue": "ロッテ免税店東京銀座店 9階インフォメーションデスク",
+    "price": "当選時の購入価格800,000円（免税品）",
+    "publicDescription": "山崎25年ミズナラ購入権、各週1名。無料応募可、9階で1日1回。購入券の抽選で現物無料贈呈ではない。国内免税店の希少高額ボトル。",
+    "ticketUrl": "",
+    "url": "https://lotteginza.com/2026-year-round-10/"
   },
   {
     "id": "WEJ-2026-050",
@@ -148,6 +178,21 @@
     "publicDescription": "長濱蒸溜所に関連した年に一度のイベントです。長浜の会場でウイスキーやビールなどを楽しめる企画です。",
     "ticketUrl": "",
     "url": "https://www.ekimachinagahama.com/2026/10/07/11424/"
+  },
+  {
+    "id": "WEJ-2026-059",
+    "title": "嘉之助蒸溜所×お酒の美術館『午后（GOGO）』イベント限定販売",
+    "date": "2026-10-10",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/10/10-10/12・11/06-11/07・11/29",
+    "region": "大阪府・東京都・沖縄県",
+    "category": "限定販売",
+    "venue": "グランドリカー高槻店／東京国際フォーラム／沖縄ハーバービューホテル",
+    "price": "12,000円（税込）",
+    "publicDescription": "嘉之助原酒のシングルモルト『午后』700ml・48%。一般流通のボトル販売なし。大阪10/10-12計99本（各日33本）、東京WF11/6-7計99本（各部33本）、沖縄11/29数量未定。",
+    "ticketUrl": "",
+    "url": "https://prtimes.jp/main/html/rd/p/000000027.000041825.html"
   },
   {
     "id": "WEJ-2026-001",
@@ -330,6 +375,36 @@
     "url": "https://www.mistore.jp/shopping/event/ginza_e/winefesta_51"
   },
   {
+    "id": "WEJ-2026-055",
+    "title": "浦和競馬オリジナルイチローズモルト 2026年10月21日来場者抽選",
+    "date": "2026-10-21",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/10/21",
+    "region": "埼玉県",
+    "category": "限定販売",
+    "venue": "浦和競馬場 埼玉県産品ショップ前 応募箱",
+    "price": "1本18,420円（税込、700ml・62％）、競馬場入場100円",
+    "publicDescription": "10/21当日5～10本限定で抽選。本人来場・各日1人1回・郵送不可。当選通知は約2週間後。2025/12/26発表済の既報を本日初検出。",
+    "ticketUrl": "",
+    "url": "https://www.urawa-keiba.jp/info/news/detail.html?did=2045"
+  },
+  {
+    "id": "WEJ-2026-068",
+    "title": "グレンスコシア 2018 7年 限定205本 WCC会員優先販売",
+    "date": "2026-10-21",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/10/21～11/20",
+    "region": "全国（オンライン）",
+    "category": "限定販売",
+    "venue": "JWRC ONLINE SHOP",
+    "price": "16,500円（税込・会員価格）",
+    "publicDescription": "シングルカスク54.6%、205本限定。一般販売は残数がある場合のみ。",
+    "ticketUrl": "",
+    "url": "https://www.scotchclub-shop.org/items/163500533"
+  },
+  {
     "id": "WEJ-2026-004",
     "title": "SHIMODA WHISKY FESTIVAL 2026",
     "date": "2026-10-24",
@@ -388,6 +463,36 @@
     "publicDescription": "嘉之助蒸溜所と日置蒸溜蔵を舞台に開催される蒸溜祭です。蒸溜所ならではの企画や限定ボトルの抽選・販売が予定されています。",
     "ticketUrl": "",
     "url": "https://kanosuke.com/blogs/explore-kanosuke/festival2026"
+  },
+  {
+    "id": "WEJ-2026-053",
+    "title": "新道蒸溜所×新潟亀田蒸溜所 原酒交換コラボボトル2種 発売記念イベント",
+    "date": "2026-10-30",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/10/30",
+    "region": "東京都／全国オンライン",
+    "category": "限定販売",
+    "venue": "新宿センタービル3F クレア・ライフ・パートナーズ セミナースペース／オンライン",
+    "price": "一般：会場8,800円／配信5,500円、プレミアム会員：6,600円／4,400円",
+    "publicDescription": "2026/10/09主催者発表。10/30 19:00～22:00、会場40名／配信100名。原酒交換コラボ2種（SHINDO Cross Distillery 01、OHTANI WHISKY KAMEDA85 feat. SHINDO）各16,500円。全8種試飲・希少原酒、会場限定即売会。",
+    "ticketUrl": "",
+    "url": "https://dearwhisky.com/event/shindo-kameda-tastingevent/"
+  },
+  {
+    "id": "WEJ-2026-067",
+    "title": "THE DEACON BLACK 日本蒸奇博覧会2026 特設バー・試飲イベント",
+    "date": "2026-10-31",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/10/31 11:00-20:00／11/01 11:00-19:00",
+    "region": "東京都",
+    "category": "イベント",
+    "venue": "STUDIO EASE 目黒（東京都品川区西五反田3-1-2）",
+    "price": "各日入場1,500円（税込）、酒類の提供料金未確認",
+    "publicDescription": "10/19発売『THE DEACON BLACK』をテーマに特設ブース・バー、カクテル提供・パフォーマンス等を実施。主催者による10/31・11/01開催詳細を確認。",
+    "ticketUrl": "",
+    "url": "https://www.japan-steampunk.com/post/the-deacon-steampunk-2026"
   },
   {
     "id": "WEJ-2026-037",
@@ -495,6 +600,36 @@
     "url": "https://bar-sawa.net/redrose/seminar/"
   },
   {
+    "id": "WEJ-2026-061",
+    "title": "AnytimeWhisky2026／公式開催詳細・前売抽選特典確認",
+    "date": "2026-11-07",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/11/07-11/08（11:00-17:00）",
+    "region": "愛知県",
+    "category": "限定販売",
+    "venue": "久屋大通公園 サカエヒロバス（名古屋三越前）",
+    "price": "前売2,500円／当日3,000円",
+    "publicDescription": "既存DB未確認イベントの公式詳細を発見。前売エコバッグ付、ウイスキーが当たる抽選企画あり。イベント時間11:00～17:00（最終入場16:30）は出展メーカー公式10/6告知で確認。賞品銘柄・本数未確認。",
+    "ticketUrl": "",
+    "url": "https://anytime-whisky.localinfo.jp/posts/58759290/"
+  },
+  {
+    "id": "WEJ-2026-065",
+    "title": "酒育の会 ウイスキーテイスティング基礎講座 第10回",
+    "date": "2026-11-07",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/11/07 14:00～16:00",
+    "region": "東京都",
+    "category": "セミナー",
+    "venue": "酒育の会 神楽坂ラウンジ",
+    "price": "8,000円（税込）",
+    "publicDescription": "全10回の最終回。日本産ウイスキーをテーマとする5～6種のブラインド試飲。定員14人。",
+    "ticketUrl": "",
+    "url": "https://shuiku.jp/news/19697"
+  },
+  {
     "id": "WEJ-2026-033",
     "title": "新道蒸留所 未発売カスク・7種テイスティングセミナー",
     "date": "2026-11-08",
@@ -540,6 +675,21 @@
     "url": "https://makurazaki-whisky-matsuri.com/"
   },
   {
+    "id": "WEJ-2026-066",
+    "title": "山鹿蒸溜所 11月8日限定 有料ガイドツアー",
+    "date": "2026-11-08",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/11/08 10:30-11:30",
+    "region": "熊本県",
+    "category": "限定販売",
+    "venue": "山鹿蒸溜所（熊本県山鹿市）",
+    "price": "大人2,000円／20歳未満1,000円（税込）",
+    "publicDescription": "定員10名程度。見学通路での製造設備見学、樽熟成庫見学、ウイスキー試飲。既存DBの11/21山鹿蒸溜所まつりとは別の日程・企画。",
+    "ticketUrl": "",
+    "url": "https://yamagadistillery.co.jp/news/992/"
+  },
+  {
     "id": "WEJ-2026-023",
     "title": "ザ・グレンタレット ウイスキーセミナー",
     "date": "2026-11-11",
@@ -553,6 +703,21 @@
     "publicDescription": "ザ・グレンタレットのウイスキーをテーマにしたホテルバーでの特別セミナーです。銘柄の魅力を学びながらテイスティングを楽しめます。",
     "ticketUrl": "",
     "url": "https://anaintercontinental-tokyo.jp/offer/davinci-20261111/"
+  },
+  {
+    "id": "WEJ-2026-057",
+    "title": "Distillery Water Dragon『Little K 2026 2nd』『Little K mellowship』2種限定発売",
+    "date": "2026-11-11",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/11/11",
+    "region": "静岡県",
+    "category": "限定販売",
+    "venue": "三島エリア取扱店舗／Distillery Water Dragon（静岡県三島市大社町18-5）",
+    "price": "各375ml・4,950円（税込）／2nd 4,300本・mellowship 2,200本",
+    "publicDescription": "Little K 2026 2ndは23か月熟成61％・4,300本、mellowshipは小麦由来の54％・2,200本。三島エリア限定小売（域外はkey3トークン条件等）。",
+    "ticketUrl": "",
+    "url": "https://whiskey.co.jp/"
   },
   {
     "id": "WEJ-2026-003",
@@ -585,6 +750,21 @@
     "url": "https://shizuoka-distillery.jp/whisky-school-introductorycourse/"
   },
   {
+    "id": "WEJ-2026-062",
+    "title": "酒育の会 テイスティング技術向上セミナー（11月14日・15日開催）",
+    "date": "2026-11-14",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/11/14・11/15 14:00-16:00",
+    "region": "東京都",
+    "category": "セミナー",
+    "venue": "酒育の会 神楽坂ラウンジ",
+    "price": "会員4,000円／一般6,600円",
+    "publicDescription": "10/17公式発表、11/14・15各回5銘柄のブラインド試飲。定員各15人。両日同内容。",
+    "ticketUrl": "",
+    "url": "https://shuiku.jp/news/20575"
+  },
+  {
     "id": "WEJ-2026-040",
     "title": "Drink Up!! SENDAI Wine & Whisky FES 2026 ～仙台で乾杯!!～",
     "date": "2026-11-15",
@@ -600,6 +780,21 @@
     "url": "https://www.vinetbonheur.com/view/item/000000013218"
   },
   {
+    "id": "WEJ-2026-058",
+    "title": "Moon Shine Cocktail Competition 2026 決勝・アフターパーティー",
+    "date": "2026-11-15",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/11/15",
+    "region": "東京都",
+    "category": "イベント",
+    "venue": "ストップザシーズンインザサン（渋谷区神宮前1-14-21 2F）",
+    "price": "観覧1,500円（完売）／アフターパーティー5,000円",
+    "publicDescription": "Whiskey&Co.主催。11/15 10:30〜15:30セミファイナル・ファイナル、18:00〜アフターパーティー。決勝では同社ウイスキー原酒 Moon Shine を使用。観覧席は完売。",
+    "ticketUrl": "",
+    "url": "https://whiskey.co.jp/pages/mscc"
+  },
+  {
     "id": "WEJ-2026-022",
     "title": "LAGG WHISKY PAIRING DINNER",
     "date": "2026-11-20",
@@ -613,6 +808,21 @@
     "publicDescription": "ラグ蒸溜所のウイスキーと料理の組み合わせを楽しむペアリングディナーです。特別なシングルカスクを含むテイスティングが予定されています。",
     "ticketUrl": "",
     "url": "https://whisk-e.co.jp/news/laggdinner2026/"
+  },
+  {
+    "id": "WEJ-2026-069",
+    "title": "グレンドロナック200周年『The Sherry Duet』テイスティングイベント",
+    "date": "2026-11-20",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/11/20～11/22 12:30～22:30",
+    "region": "東京都",
+    "category": "イベント",
+    "venue": "House of OMOTESANDO（渋谷区神宮前5-34-8）",
+    "price": "2,000円（税込）／12・15・18・21年の試飲付き",
+    "publicDescription": "創業200周年記念。10/20予約開始。11/19はメディア・関係者のみ。展示・演奏と4種の試飲。",
+    "ticketUrl": "",
+    "url": "https://www.glendronachdistillery.com/ja-jp/our-news/the-sherry-duet/"
   },
   {
     "id": "WEJ-2026-021",
@@ -660,6 +870,36 @@
     "url": "https://shizuoka-distillery.jp/whiskyschool/"
   },
   {
+    "id": "WEJ-2026-060",
+    "title": "沖縄ウイスキー＆スピリッツフェスティバル2026／公式詳細・限定販売の確認",
+    "date": "2026-11-29",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/11/29 11:30-17:00",
+    "region": "沖縄県",
+    "category": "限定販売",
+    "venue": "沖縄ハーバービューホテル（那覇市）",
+    "price": "前売4,500円／特典付5,500円（500枚限定）",
+    "publicDescription": "主催者公式サイトで日時・会場・入場料金を確認。70社以上参加予定。フェス限定のマルスウイスキー・オリジナルボトルと『午后（GOGO）』会場限定販売（数量未定）を案内。",
+    "ticketUrl": "",
+    "url": "https://okinawa-ws-fes.jp/2026-fes/"
+  },
+  {
+    "id": "WEJ-2026-063",
+    "title": "酒育の会 国内蒸留所ツアー（火の神・津貫・嘉之助）",
+    "date": "2026-11-29",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/11/29 08:00～18:00",
+    "region": "鹿児島県",
+    "category": "蒸溜所",
+    "venue": "鹿児島中央駅→火の神→津貫→嘉之助",
+    "price": "会員28,000円／一般30,000円（税込）",
+    "publicDescription": "火の神・津貫・嘉之助の3蒸溜所見学と試飲。嘉之助限定ハンドフィル購入機会あり（在庫・購入保証なし）。定員15名。",
+    "ticketUrl": "",
+    "url": "https://shuiku.jp/news/20482"
+  },
+  {
     "id": "WEJ-2026-024",
     "title": "山崎蒸溜所ものづくりツアー 2026年12月分 抽選受付",
     "date": "2026-12-01",
@@ -690,6 +930,21 @@
     "url": "https://www.suntory.co.jp/factory/hakushu/news/detail/post_6.html"
   },
   {
+    "id": "WEJ-2026-070",
+    "title": "スターヒルファームウイスキー2026 国内数量限定発売",
+    "date": "2026-12-08",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/12/08",
+    "region": "全国",
+    "category": "限定販売",
+    "venue": "国内取扱店（店舗未確認）",
+    "price": "希望小売10,000円（税別、700ml）",
+    "publicDescription": "サントリー10/20公式発表。メーカーズマーク蒸溜所のアメリカンウィートウイスキー、3種の小麦・7～8年熟成、58%、数量限定。",
+    "ticketUrl": "",
+    "url": "https://www.suntory.co.jp/news/article/2026/15150.html"
+  },
+  {
     "id": "WEJ-2026-017",
     "title": "長濱蒸溜所 ジャパニーズウイスキートレイル 旅するセミナー",
     "date": "2026-12-12",
@@ -703,6 +958,21 @@
     "publicDescription": "長濱蒸溜所のジャパニーズウイスキートレイルをテーマにした旅するセミナーです。ウイスキーを通じて各地の魅力に触れられます。",
     "ticketUrl": "",
     "url": "https://scotchclub.org/eventseminar/"
+  },
+  {
+    "id": "WEJ-2026-064",
+    "title": "酒育の会 くりりん氏特別セミナー『日本のウイスキー蒸留所の現在地』",
+    "date": "2026-12-13",
+    "addedAt": "2026-10-21",
+    "imageUrl": "",
+    "dateLabel": "2026/12/13 13:00～15:00",
+    "region": "東京都",
+    "category": "セミナー",
+    "venue": "コンフォート水道橋（千代田区神田三崎町）",
+    "price": "会員10,000円／一般12,000円（税込）",
+    "publicDescription": "講師くりりん氏。日本のウイスキー蒸留所事情を解説。定員25名。",
+    "ticketUrl": "",
+    "url": "https://shuiku.jp/news/20492"
   },
   {
     "id": "WEJ-2026-045",
