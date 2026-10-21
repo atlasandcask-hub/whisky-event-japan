@@ -39,7 +39,8 @@ jobs:
           prompt: |
             Repository: atlasandcask-hub/whisky-event-japan
             Issue number: ${{ github.event.issue.number || inputs.issue_number }}
-            If issue number is 0: SMOKE TEST ONLY. Read README.md and report the project name and that authentication works. Do not modify files, create branches, commit, or create a PR.\n            Otherwise: Read the specified GitHub issue and implement its requirements on a separate branch.
+            If issue number is 0: SMOKE TEST ONLY. Read README.md and report the project name and that authentication works. Do not modify files, create branches, commit, or create a PR.
+            Otherwise: Read the specified GitHub issue and implement its requirements on a separate branch.
             Keep all existing events and Google Sheets synchronization intact.
             Run tests and submit a pull request for human review.
             NEVER push to main, merge a pull request, deploy to Cloudflare, publish Instagram posts, or change secrets.
