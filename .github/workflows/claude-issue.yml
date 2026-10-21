@@ -33,7 +33,29 @@ jobs:
             echo "::error::ANTHROPIC_API_KEY is not configured. No Claude task was started."
             exit 1
           fi
+      - name: Diagnose Claude API access without exposing credentials
+        if: inputs.issue_number == '0'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.error
+          url = "https://api.anthropic.com/v1/messages"
+          payload = {"model":"claude-sonnet-4-5","max_tokens":24,"messages":[{"role":"user","content":"Reply with OK."}]}
+          req = urllib.request.Request(url, data=json.dumps(payload).encode(), headers={"x-api-key":os.environ["ANTHROPIC_API_KEY"],"anthropic-version":"2023-06-01","content-type":"application/json"}, method="POST")
+          try:
+              with urllib.request.urlopen(req,timeout=25) as resp:
+                  data=json.load(resp)
+                  print("API probe succeeded. Model:",data.get("model"),"stop_reason:",data.get("stop_reason"))
+          except urllib.error.HTTPError as exc:
+              try: body=json.loads(exc.read().decode())
+              except Exception: body={}
+              err=body.get("error",{})
+              print("API probe failed. HTTP:",exc.code,"error_type:",err.get("type","unknown"))
+              raise SystemExit(1)
+          PY
       - name: Run Claude on approved issue
+        if: inputs.issue_number != '0'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
