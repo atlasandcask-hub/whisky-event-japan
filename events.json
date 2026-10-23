@@ -450,6 +450,21 @@
     "url": "https://www.mistore.jp/shopping/event/ginza_e/winefesta_51"
   },
   {
+    "id": "WEJ-2026-079",
+    "title": "SMWS 33.141・125.81 希少カスク2銘柄 抽選販売",
+    "date": "2026-10-23",
+    "addedAt": "2026-10-23",
+    "imageUrl": "",
+    "dateLabel": "2026/10/23",
+    "region": "全国",
+    "category": "限定販売",
+    "venue": "SMWS JAPAN 公式オンラインショップ",
+    "price": "本体価格未確認",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://smwsjapan.com/product/list?fpfl=0&pno=1"
+  },
+  {
     "id": "WEJ-2026-004",
     "title": "SHIMODA WHISKY FESTIVAL 2026",
     "date": "2026-10-24",
@@ -510,6 +525,36 @@
     "url": "https://kanosuke.com/blogs/explore-kanosuke/festival2026"
   },
   {
+    "id": "WEJ-2026-084",
+    "title": "Glenfiddich The Celestial Pairing vol.2",
+    "date": "2026-10-28",
+    "addedAt": "2026-10-23",
+    "imageUrl": "",
+    "dateLabel": "2026/10/28",
+    "region": "東京都",
+    "category": "バー",
+    "venue": "ザ・リッツ・カールトン東京",
+    "price": "9,800円",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://www.tablecheck.com/shops/ritzcarlton-tokyo-thelobbylounge-bar/reserve?menu_items=6a9fcec47bc8f4f518a4e53b"
+  },
+  {
+    "id": "WEJ-2026-080",
+    "title": "SMWS CODE33＆125 オンライン・テイスティング会",
+    "date": "2026-10-30",
+    "addedAt": "2026-10-23",
+    "imageUrl": "",
+    "dateLabel": "2026/10/30",
+    "region": "全国",
+    "category": "SMWS",
+    "venue": "オンラインYouTube配信・試飲キット配送",
+    "price": "会員6,600円／非会員8,800円（税込）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://smwsjapan.com/2026%EF%BC%8E10%E6%9C%88%2B%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%BB%E3%83%86%E3%82%A4%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BC%9A%EF%BC%9ACODE33%2B%EF%BC%86%2B125%E7%89%B9%E9%9B%86%EF%BC%81/product/202610_onlinetasting_oct/"
+  },
+  {
     "id": "WEJ-2026-053",
     "title": "新道蒸溜所×新潟亀田蒸溜所 原酒交換コラボボトル2種 発売記念イベント",
     "date": "2026-10-30",
@@ -553,6 +598,21 @@
     "publicDescription": "10/19発売『THE DEACON BLACK』をテーマに特設ブース・バー、カクテル提供・パフォーマンス等を実施。主催者による10/31・11/01開催詳細を確認。",
     "ticketUrl": "",
     "url": "https://www.japan-steampunk.com/post/the-deacon-steampunk-2026"
+  },
+  {
+    "id": "WEJ-2026-083",
+    "title": "SMWS THE GATHERING JAPAN 2026 愛知・名古屋 昼の部",
+    "date": "2026-11-01",
+    "addedAt": "2026-10-23",
+    "imageUrl": "",
+    "dateLabel": "2026/11/01",
+    "region": "愛知県",
+    "category": "SMWS",
+    "venue": "名古屋市・BAR BARNS共同企画（会場詳細未確認）",
+    "price": "39,600円（税込）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://blog.smwsjapan.com/event/10943/"
   },
   {
     "id": "WEJ-2026-074",
@@ -658,6 +718,21 @@
     "publicDescription": "既存DB未確認イベントの公式詳細を発見。前売エコバッグ付、ウイスキーが当たる抽選企画あり。イベント時間11:00～17:00（最終入場16:30）は出展メーカー公式10/6告知で確認。賞品銘柄・本数未確認。",
     "ticketUrl": "",
     "url": "https://anytime-whisky.localinfo.jp/posts/58759290/"
+  },
+  {
+    "id": "WEJ-2026-087",
+    "title": "ウイスキーフェスティバル東京 嘉之助マスタークラス 10年目のKANOSUKE",
+    "date": "2026-11-07",
+    "addedAt": "2026-10-23",
+    "imageUrl": "",
+    "dateLabel": "2026/11/07",
+    "region": "東京都",
+    "category": "セミナー",
+    "venue": "東京国際フォーラム ホールE",
+    "price": "受講料5,000円（税込）＋フェス入場券",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://whiskyfestival.jp/tokyo2026/seminar4/"
   },
   {
     "id": "WEJ-2026-030",
@@ -900,6 +975,36 @@
     "url": "https://www.glendronachdistillery.com/ja-jp/our-news/the-sherry-duet/"
   },
   {
+    "id": "WEJ-2026-088",
+    "title": "日光街道 小山蒸溜所「哲／TETSU」2026限定2銘柄（各1000本）",
+    "date": "2026-11-20",
+    "addedAt": "2026-10-23",
+    "imageUrl": "",
+    "dateLabel": "2026/11/20",
+    "region": "栃木県",
+    "category": "限定販売",
+    "venue": "取扱酒販店／西堀酒造公式オンライン（会員対象）",
+    "price": "小山17,500円／日光19,800円（税抜）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://nishiborisyuzo.com/tetsu-2026-25312.html"
+  },
+  {
+    "id": "WEJ-2026-081",
+    "title": "SMWS JAPAN 11月東京テイスティング会 第1部",
+    "date": "2026-11-21",
+    "addedAt": "2026-10-23",
+    "imageUrl": "",
+    "dateLabel": "2026/11/21",
+    "region": "東京都",
+    "category": "SMWS",
+    "venue": "THE BASE（東京都港区東麻布）",
+    "price": "5,500円（税込）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://smwsjapan.com/product/list?fpfl=0&pno=1"
+  },
+  {
     "id": "WEJ-2026-075",
     "title": "SMWS JAPAN 11月東京テイスティング会 第3部（9銘柄）",
     "date": "2026-11-21",
@@ -913,6 +1018,21 @@
     "publicDescription": "2026年10・11・12月発売アイテム各3種、計9種を各10ml試飲。定員6名。非会員はゲスト登録が必要。残席未確認。",
     "ticketUrl": "",
     "url": "https://smwsjapan.com/%5B%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%5D%2B2026%E5%B9%B411%E6%9C%8821%E6%97%A5%28%E5%9C%9F%29%2B16%EF%BC%9A20%EF%BD%9E17%EF%BC%9A50%2B%2B%2B%E6%9D%B1%E4%BA%AC%E4%BC%9A%E5%A0%B4%2B%E3%83%86%E3%82%A4%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E4%BC%9A%2B%40THE%2BBASE/product/EV_202611_tasting_thabase_3/"
+  },
+  {
+    "id": "WEJ-2026-082",
+    "title": "SMWS 東京テイスティング会 第2部",
+    "date": "2026-11-21",
+    "addedAt": "2026-10-23",
+    "imageUrl": "",
+    "dateLabel": "2026/11/21",
+    "region": "東京都",
+    "category": "SMWS",
+    "venue": "THE BASE",
+    "price": "5,500円",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://smwsjapan.com/product/list?fpfl=0&pno=1"
   },
   {
     "id": "WEJ-2026-021",
@@ -1078,6 +1198,36 @@
     "publicDescription": "サントリーのブレンデッドウイスキー碧Aoから、スコッチの個性を強調した数量限定エディションが登場します。スモーキーで複雑な味わいが特徴です。",
     "ticketUrl": "",
     "url": "https://www.suntory.co.jp/news/article/2026/15147.html"
+  },
+  {
+    "id": "WEJ-2026-086",
+    "title": "山崎蒸溜所 2027年1月有料ツアー抽選受付",
+    "date": "2027-01-01",
+    "addedAt": "2026-10-23",
+    "imageUrl": "",
+    "dateLabel": "2027/01",
+    "region": "大阪府",
+    "category": "蒸溜所",
+    "venue": "サントリー山崎蒸溜所",
+    "price": "有料（価格未確認）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://www.suntory.co.jp/factory/yamazaki/news/detail/post_4.html"
+  },
+  {
+    "id": "WEJ-2026-085",
+    "title": "白州蒸溜所 2027年1月有料ツアー抽選受付",
+    "date": "2027-01-01",
+    "addedAt": "2026-10-23",
+    "imageUrl": "",
+    "dateLabel": "2027/01",
+    "region": "山梨県",
+    "category": "蒸溜所",
+    "venue": "サントリー白州蒸溜所",
+    "price": "有料（価格未確認）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://www.suntory.co.jp/factory/hakushu/news/detail/post_6.html"
   },
   {
     "id": "WEJ-2026-028",
