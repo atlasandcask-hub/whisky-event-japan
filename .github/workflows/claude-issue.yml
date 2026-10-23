@@ -40,19 +40,34 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, os, urllib.request, urllib.error
-          url = "https://api.anthropic.com/v1/messages"
-          payload = {"model":"claude-sonnet-4-5","max_tokens":24,"messages":[{"role":"user","content":"Reply with OK."}]}
-          req = urllib.request.Request(url, data=json.dumps(payload).encode(), headers={"x-api-key":os.environ["ANTHROPIC_API_KEY"],"anthropic-version":"2023-06-01","content-type":"application/json"}, method="POST")
-          try:
-              with urllib.request.urlopen(req,timeout=25) as resp:
-                  data=json.load(resp)
-                  print("API probe succeeded. Model:",data.get("model"),"stop_reason:",data.get("stop_reason"))
-          except urllib.error.HTTPError as exc:
-              try: body=json.loads(exc.read().decode())
-              except Exception: body={}
-              err=body.get("error",{})
-              print("API probe failed. HTTP:",exc.code,"error_type:",err.get("type","unknown"))
+          key = os.environ["ANTHROPIC_API_KEY"]
+          headers = {"x-api-key":key,"anthropic-version":"2023-06-01","content-type":"application/json"}
+          def api_request(url, payload=None):
+              req = urllib.request.Request(url, data=(json.dumps(payload).encode() if payload is not None else None), headers=headers, method=("POST" if payload is not None else "GET"))
+              try:
+                  with urllib.request.urlopen(req,timeout=25) as resp:
+                      return json.load(resp)
+              except urllib.error.HTTPError as exc:
+                  try: err=json.loads(exc.read().decode()).get("error",{})
+                  except Exception: err={}
+                  # Print only bounded, sanitized diagnostic fields, never raw response bodies or credentials.
+                  message=str(err.get("message",""))[:350]
+                  for secret in (key,):
+                      message=message.replace(secret,"[REDACTED]")
+                  print("API HTTP:",exc.code,"error_type:",err.get("type","unknown"),"message:",message)
+                  raise SystemExit(1)
+          models=api_request("https://api.anthropic.com/v1/models?limit=100").get("data",[])
+          ids=[m.get("id","") for m in models]
+          print("Models accessible:",len(ids))
+          preferred=[m for m in ids if "sonnet" in m.lower()]
+          if not preferred:
+              print("No Sonnet model listed. Check Console model access.")
               raise SystemExit(1)
+          model=preferred[0]
+          print("Selected model:",model)
+          payload={"model":model,"max_tokens":24,"messages":[{"role":"user","content":"Reply with OK."}]}
+          data=api_request("https://api.anthropic.com/v1/messages",payload)
+          print("API probe succeeded. Model:",data.get("model"),"stop_reason:",data.get("stop_reason"))
           PY
       - name: Run Claude on approved issue
         if: inputs.issue_number != '0'
