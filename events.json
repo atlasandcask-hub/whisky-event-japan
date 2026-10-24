@@ -705,6 +705,21 @@
     "url": "https://komoro-first-release.com/"
   },
   {
+    "id": "WEJ-2026-092",
+    "title": "野沢温泉蒸留所 初のシングルモルト Barrel Hall Series 発売",
+    "date": "2026-11-06",
+    "addedAt": "2026-10-24",
+    "imageUrl": "",
+    "dateLabel": "2026/11/06",
+    "region": "長野県（全国販売）",
+    "category": "限定販売",
+    "venue": "野沢温泉蒸留所／公式オンラインストア／取扱酒販店",
+    "price": "13,200円（税込・700ml）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://prtimes.jp/main/html/rd/p/000000032.000089162.html"
+  },
+  {
     "id": "WEJ-2026-061",
     "title": "AnytimeWhisky2026／公式開催詳細・前売抽選特典確認",
     "date": "2026-11-07",
@@ -1050,6 +1065,21 @@
     "url": "https://yamagadistillery.co.jp/news/973/"
   },
   {
+    "id": "WEJ-2026-091",
+    "title": "厚岸ウイスキー メーカーズディナー2026｜グラーレ マルヤマ",
+    "date": "2026-11-23",
+    "addedAt": "2026-10-24",
+    "imageUrl": "",
+    "dateLabel": "2026/11/23",
+    "region": "北海道",
+    "category": "試飲会・ディナー",
+    "venue": "グラーレ マルヤマ（札幌市中央区南1条西28丁目1-3 TUTU BLD.1F）",
+    "price": "18,000円（税込）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://www.gllare.jp/697/"
+  },
+  {
     "id": "WEJ-2026-036",
     "title": "山崎 リフィルスパニッシュオーク 数量限定発売",
     "date": "2026-11-24",
@@ -1140,6 +1170,21 @@
     "url": "https://www.suntory.co.jp/factory/hakushu/news/detail/post_6.html"
   },
   {
+    "id": "WEJ-2026-090",
+    "title": "土屋守と行く 富士御殿場蒸溜所＆富嶽蒸溜所 日帰りツアー",
+    "date": "2026-12-05",
+    "addedAt": "2026-10-24",
+    "imageUrl": "",
+    "dateLabel": "2026/12/05",
+    "region": "静岡県・山梨県",
+    "category": "蒸溜所見学",
+    "venue": "JR小田原駅集合／富士御殿場蒸溜所・富嶽蒸溜所（解散は御殿場駅または小田原駅）",
+    "price": "35,000円（税込・昼食付）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://scotchclub.org/info/%EF%BC%9C%E5%91%8A%E7%9F%A5%EF%BC%9E%E5%9C%9F%E5%B1%8B%E5%AE%88%E3%81%A8%E8%A1%8C%E3%81%8F-%E5%AF%8C%E5%A3%AB%E5%BE%A1%E6%AE%BF%E5%A0%B4%E8%92%B8%E6%BA%9C%E6%89%80%EF%BC%86%E5%AF%8C%E5%B6%BD%E8%92%B8/"
+  },
+  {
     "id": "WEJ-2026-070",
     "title": "スターヒルファームウイスキー2026 国内数量限定発売",
     "date": "2026-12-08",
@@ -1200,6 +1245,21 @@
     "url": "https://www.suntory.co.jp/news/article/2026/15147.html"
   },
   {
+    "id": "WEJ-2026-094",
+    "title": "山崎蒸溜所 2027年1月 山崎ウイスキー館無料見学予約開始",
+    "date": "2027-01-01",
+    "addedAt": "2026-10-24",
+    "imageUrl": "",
+    "dateLabel": "2027/01",
+    "region": "大阪府",
+    "category": "蒸溜所見学",
+    "venue": "山崎蒸溜所 山崎ウイスキー館",
+    "price": "無料",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://www.suntory.co.jp/factory/yamazaki/news/detail/post_4.html"
+  },
+  {
     "id": "WEJ-2026-086",
     "title": "山崎蒸溜所 2027年1月有料ツアー抽選受付",
     "date": "2027-01-01",
@@ -1225,6 +1285,21 @@
     "category": "蒸溜所",
     "venue": "サントリー白州蒸溜所",
     "price": "有料（価格未確認）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://www.suntory.co.jp/factory/hakushu/news/detail/post_6.html"
+  },
+  {
+    "id": "WEJ-2026-093",
+    "title": "白州蒸溜所 2027年1月 無料入場・見学予約開始",
+    "date": "2027-01-07",
+    "addedAt": "2026-10-24",
+    "imageUrl": "",
+    "dateLabel": "2027/01/07-01/31",
+    "region": "山梨県",
+    "category": "蒸溜所見学",
+    "venue": "白州蒸溜所 ウイスキー博物館・セントラルハウス",
+    "price": "無料",
     "publicDescription": "",
     "ticketUrl": "",
     "url": "https://www.suntory.co.jp/factory/hakushu/news/detail/post_6.html"
@@ -1273,6 +1348,21 @@
     "publicDescription": "2027年3月14日（日）開催。開始・終了時刻、チケット料金や発売日は未公表。",
     "ticketUrl": "",
     "url": "https://craftwhiskyfesta.jp/outline/2027_01/"
+  },
+  {
+    "id": "WEJ-2026-089",
+    "title": "ウイスキー＆スピリッツフェスティバル2027 in 横浜",
+    "date": "2027-04-10",
+    "addedAt": "2026-10-24",
+    "imageUrl": "",
+    "dateLabel": "2027/04/10-04/11",
+    "region": "神奈川県",
+    "category": "フェス",
+    "venue": "パシフィコ横浜 展示ホールD（横浜市西区みなとみらい1-1-1）",
+    "price": "各部5,000円（税込）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://whiskyfestival.jp/yokohama2027/"
   },
   {
     "id": "WEJ-2026-077",
