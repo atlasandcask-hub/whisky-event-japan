@@ -1,0 +1,23 @@
+name: Test WEJ sync safety
+on:
+  pull_request:
+    paths:
+      - 'scripts/sync_events.py'
+      - 'tests/**'
+      - '.github/workflows/*sync-events.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/sync_events.py'
+      - 'tests/**'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
