@@ -525,6 +525,21 @@
     "url": "https://kanosuke.com/blogs/explore-kanosuke/festival2026"
   },
   {
+    "id": "WEJ-2026-098",
+    "title": "WHISKY MEW『攻殻機動隊』シークレットスペイサイド1994・グレングラント2009 抽選",
+    "date": "2026-10-27",
+    "addedAt": "2026-10-29",
+    "imageUrl": "",
+    "dateLabel": "2026/10/27-11/03",
+    "region": "全国（オンライン）",
+    "category": "限定販売",
+    "venue": "WHISKY MEW公式サイト（会員登録・抽選応募）",
+    "price": "シークレットスペイサイド1994 39,600円／グレングラント2009 23,100円（税込）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://whiskymew.jp/items/2026/gits/lottery-gits.html"
+  },
+  {
     "id": "WEJ-2026-084",
     "title": "Glenfiddich The Celestial Pairing vol.2",
     "date": "2026-10-28",
@@ -690,6 +705,21 @@
     "url": "https://whiskyfestival.jp/tokyo2026/pickup/#16842"
   },
   {
+    "id": "WEJ-2026-096",
+    "title": "ウイスキーフェスティバル東京2026 会場ブース限定商品8社・希少ボトル",
+    "date": "2026-11-06",
+    "addedAt": "2026-10-29",
+    "imageUrl": "",
+    "dateLabel": "2026/11/06-11/07",
+    "region": "東京都",
+    "category": "限定販売",
+    "venue": "東京国際フォーラム ホールE・各出展企業ブース",
+    "price": "ラフロイグ21年48,400円／Little K 5,940円／江井ヶ嶋3,000円／馬追7,000円など（税込）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://prtimes.jp/main/html/rd/p/000000373.000119996.html"
+  },
+  {
     "id": "WEJ-2026-029",
     "title": "小諸蒸留所 KOMORO = KANPAI ファーストリリース記念イベント",
     "date": "2026-11-06",
@@ -703,6 +733,21 @@
     "publicDescription": "小諸蒸留所の初リリースを祝う記念イベントです。蒸留所やサテライト会場で、ウイスキーに関連するさまざまなプログラムが予定されています。",
     "ticketUrl": "",
     "url": "https://komoro-first-release.com/"
+  },
+  {
+    "id": "WEJ-2026-097",
+    "title": "神戸蒸溜所 KOBE WHISKY 1st edition・200本限定シングルカスク発売",
+    "date": "2026-11-06",
+    "addedAt": "2026-10-29",
+    "imageUrl": "",
+    "dateLabel": "2026/11/06・11/07・11/14・11/15・11/16",
+    "region": "兵庫県・東京都（オンライン予約あり）",
+    "category": "限定販売",
+    "venue": "神戸蒸溜所テイスティング＆ビジターセンター／ウイスキーフェスティバル東京／公式オンライン",
+    "price": "シングルモルト14,300円／シングルバーボンカスク19,800円（税込・700ml）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://prtimes.jp/main/html/rd/p/000000010.000146820.html"
   },
   {
     "id": "WEJ-2026-092",
@@ -748,6 +793,21 @@
     "publicDescription": "",
     "ticketUrl": "",
     "url": "https://whiskyfestival.jp/tokyo2026/seminar4/"
+  },
+  {
+    "id": "WEJ-2026-099",
+    "title": "リカーマウンテン SINGLE MALT JOURNEY 2026 3ブランド週末試飲会",
+    "date": "2026-11-07",
+    "addedAt": "2026-10-29",
+    "imageUrl": "",
+    "dateLabel": "2026/11/07-11/30",
+    "region": "全国（開催対象の一部店舗・オンライン）",
+    "category": "酒販店・試飲会",
+    "venue": "リカーマウンテン対象店舗（試飲実施店は店舗一覧参照）／公式オンラインショップ",
+    "price": "試飲参加費未確認／対象銘柄は特価販売（例：グレンフィディック12年4,268円税込）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://prtimes.jp/main/html/rd/p/000000258.000030735.html"
   },
   {
     "id": "WEJ-2026-030",
@@ -853,6 +913,21 @@
     "publicDescription": "鹿児島県枕崎市の火の神蒸溜所で開催されるウイスキー祭りです。限定564本の記念ボトル販売や、テイスティング付きセミナーが企画されています。",
     "ticketUrl": "",
     "url": "https://makurazaki-whisky-matsuri.com/"
+  },
+  {
+    "id": "WEJ-2026-095",
+    "title": "WHISKY MEW『ウルトラマン』スプリングバンク2000・キャンベルタウン2016 限定抽選",
+    "date": "2026-11-10",
+    "addedAt": "2026-10-29",
+    "imageUrl": "",
+    "dateLabel": "2026/11/10-11/17",
+    "region": "全国（オンライン）",
+    "category": "限定販売",
+    "venue": "WHISKY MEW公式サイト（会員登録・抽選応募）",
+    "price": "スプリングバンク2000 165,000円／キャンベルタウン・ブレンデッドモルト2016 23,100円（税込）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://whiskymew.jp/items/2026/ultraman/lottery-ultraman.html"
   },
   {
     "id": "WEJ-2026-057",
