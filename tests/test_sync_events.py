@@ -215,4 +215,77 @@ class SafetyTests(unittest.TestCase):
         self.assertTrue(sync.validate_events([bad]))
 
 
+
+class Current97Tests(SafetyTests):
+    """Use actual 99 source rows / 97 public IDs; inherit safety cases at current scale."""
+    def setUp(self):
+        super().setUp()
+        self.original = json.loads((ROOT/'tests/fixtures/events_2026-11-01.json').read_text())
+        self.events = json.loads((ROOT/'events.json').read_text())
+        self.source = (ROOT/'tests/fixtures/sheet_public_2026-11-01.csv').read_text()
+        self.write(self.events)
+
+    # Historical tests intentionally stay in SafetyTests; current equivalents below.
+    test_normal_92_and_new_event = None
+    test_normal_92_round_trip_preserves_every_field = None
+    test_reviewed_sheet_corrections_can_resolve_existing_internal_copy = None
+    test_real_92_snapshot_is_preserved_but_existing_internal_copy_blocks_sync = None
+    test_real_snapshot_all_ids_and_historical_18_are_present = None
+    test_check_audits_real_snapshot_and_html_only_uses_public_description = None
+
+    def test_current_97_source_alignment_and_only_two_description_changes(self):
+        source = list(csv.DictReader(io.StringIO(self.source)))
+        self.assertEqual(len(source), 99)
+        self.assertEqual(len({r['ID'] for r in source}), 99)
+        self.assertNotIn('公開用説明', source[0])
+        self.assertEqual({r['ID'] for r in source if r['掲載判定']=='掲載'},
+                         {e['id'] for e in self.original})
+        self.assertEqual(len(self.events), 97)
+        before = {e['id']:e for e in self.original}
+        changed = {}
+        for e in self.events:
+            keys = {k for k in e if e[k] != before[e['id']][k]}
+            if keys: changed[e['id']] = keys
+        self.assertEqual(changed, {i:{'publicDescription'} for i in ['WEJ-2026-061','WEJ-2026-066']})
+        self.assertEqual(sync.validate_events(self.events), [])
+
+    def test_current_97_real_source_normal_sync_and_second_sync_preserve_every_field(self):
+        before = self.output.read_bytes()
+        for _ in range(2):
+            with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+                self.assertEqual(sync.sync(fetch=lambda:self.source), 0)
+            self.assertEqual({e['id']:e for e in json.loads(self.output.read_text())},
+                             {e['id']:e for e in self.events})
+        self.assertEqual(self.backup.read_bytes(), before)
+
+    def test_current_97_missing_one_or_18_or_replacement_stops_and_preserves_bytes(self):
+        data = list(csv.DictReader(io.StringIO(self.source)))
+        for missing in [{self.events[0]['id']}, MANUAL_IDS]:
+            for replace in [False, True]:
+                remaining = [r for r in data if r['ID'] not in missing]
+                if replace:
+                    remaining += [dict(data[0], ID=f'WEJ-2026-{900+i}') for i in range(len(missing))]
+                out = io.StringIO(); writer=csv.DictWriter(out, data[0].keys())
+                writer.writeheader(); writer.writerows(remaining)
+                before=self.output.read_bytes(); err=io.StringIO()
+                with redirect_stdout(io.StringIO()), redirect_stderr(err):
+                    self.assertEqual(sync.sync(fetch=lambda:out.getvalue()),1)
+                self.assertEqual(self.output.read_bytes(),before)
+                self.assertEqual(self.backup.read_bytes(),before)
+                for event_id in missing: self.assertIn(event_id,err.getvalue())
+
+    def test_current_97_uncorrected_source_fails_and_new_addition_succeeds(self):
+        self.write(self.original)
+        before=self.output.read_bytes(); err=io.StringIO()
+        with redirect_stderr(err):
+            self.assertEqual(sync.sync(fetch=lambda:self.source),1)
+        self.assertEqual(self.output.read_bytes(),before)
+        for event_id in ['WEJ-2026-061','WEJ-2026-066']: self.assertIn(event_id,err.getvalue())
+        self.write(self.events)
+        data=rows(self.events); data.append(dict(data[0],ID='WEJ-2026-999'))
+        code,_,err=self.run_sync(data)
+        self.assertEqual(code,0,err)
+        self.assertEqual(len(json.loads(self.output.read_text())),98)
+
+
 if __name__ == '__main__': unittest.main()

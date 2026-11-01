@@ -243,7 +243,8 @@ def build_events(csv_text, existing):
 
         old = existing_by_id.get(event_id, {})
 
-        # 公開用説明が未登録なら、既存の承認済み説明文を保持する（切り取りはしない）。
+        # 公開用説明列がない場合も空欄と同じ扱い。同じIDのレビュー済みJSONを
+        # 正本として保持する。備考へのフォールバックや自動清掃は行わない。
         description = cell(row, "公開用説明")
         if description and description == cell(row, "備考"):
             problems.append(f"{where}: 公開用説明が備考（内部メモ）と同一です。")
