@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
+concurrency:
+  group: wej-events-sync
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -30,6 +34,9 @@ jobs:
       - name: Validate events JSON
         run: |
           python -m json.tool events.json > /dev/null
+
+      - name: Validate public descriptions and safety
+        run: python -m unittest discover -s tests -v
 
       - name: Commit updated events
         run: |
