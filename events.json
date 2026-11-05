@@ -630,6 +630,21 @@
     "url": "https://blog.smwsjapan.com/event/10943/"
   },
   {
+    "id": "WEJ-2026-103",
+    "title": "シーバスリーガル×新橋『今宵は、新橋で。』飲食店タイアップ・くじ企画",
+    "date": "2026-11-02",
+    "addedAt": "2026-11-05",
+    "imageUrl": "",
+    "dateLabel": "2026/11/02-12/31",
+    "region": "東京都",
+    "category": "イベント",
+    "venue": "新橋周辺の対象飲食店102店舗以上（7店舗で特別演出）",
+    "price": "各店舗の対象ドリンク注文代金（料金は店舗別）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://www.chivas.com/ja-jp/stories/shimbashi-area-jack/"
+  },
+  {
     "id": "WEJ-2026-074",
     "title": "JAMESON×ROLL & BOUNCE FES 原宿ポップアップBAR",
     "date": "2026-11-03",
@@ -678,7 +693,7 @@
     "id": "WEJ-2026-002",
     "title": "ウイスキーフェスティバル2026 in 東京",
     "date": "2026-11-06",
-    "addedAt": "2026-10-08",
+    "addedAt": "2026-11-04",
     "imageUrl": "",
     "dateLabel": "2026/11/06-11/07",
     "region": "東京都",
@@ -750,21 +765,6 @@
     "url": "https://prtimes.jp/main/html/rd/p/000000010.000146820.html"
   },
   {
-    "id": "WEJ-2026-092",
-    "title": "野沢温泉蒸留所 初のシングルモルト Barrel Hall Series 発売",
-    "date": "2026-11-06",
-    "addedAt": "2026-10-24",
-    "imageUrl": "",
-    "dateLabel": "2026/11/06",
-    "region": "長野県（全国販売）",
-    "category": "限定販売",
-    "venue": "野沢温泉蒸留所／公式オンラインストア／取扱酒販店",
-    "price": "13,200円（税込・700ml）",
-    "publicDescription": "",
-    "ticketUrl": "",
-    "url": "https://prtimes.jp/main/html/rd/p/000000032.000089162.html"
-  },
-  {
     "id": "WEJ-2026-061",
     "title": "AnytimeWhisky2026／公式開催詳細・前売抽選特典確認",
     "date": "2026-11-07",
@@ -783,7 +783,7 @@
     "id": "WEJ-2026-087",
     "title": "ウイスキーフェスティバル東京 嘉之助マスタークラス 10年目のKANOSUKE",
     "date": "2026-11-07",
-    "addedAt": "2026-10-23",
+    "addedAt": "2026-11-04",
     "imageUrl": "",
     "dateLabel": "2026/11/07",
     "region": "東京都",
@@ -958,6 +958,21 @@
     "publicDescription": "ザ・グレンタレットのウイスキーをテーマにしたホテルバーでの特別セミナーです。銘柄の魅力を学びながらテイスティングを楽しめます。",
     "ticketUrl": "",
     "url": "https://anaintercontinental-tokyo.jp/offer/davinci-20261111/"
+  },
+  {
+    "id": "WEJ-2026-102",
+    "title": "デュワーズ12年ハイボール缶発売記念イベント Magic Hour Park",
+    "date": "2026-11-12",
+    "addedAt": "2026-11-04",
+    "imageUrl": "",
+    "dateLabel": "2026/11/12-11/14",
+    "region": "東京都",
+    "category": "試飲会",
+    "venue": "渋谷ストリーム 稲荷橋広場（渋谷区渋谷3-21-3）",
+    "price": "入場無料・予約不要（20歳以上）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://prtimes.jp/main/html/rd/p/000000143.000001172.html"
   },
   {
     "id": "WEJ-2026-003",
@@ -1138,6 +1153,21 @@
     "publicDescription": "熊本県の山鹿蒸溜所で開催される蒸溜所まつりです。蒸溜所の雰囲気を楽しみながらウイスキーに親しめるイベントです。",
     "ticketUrl": "",
     "url": "https://yamagadistillery.co.jp/news/973/"
+  },
+  {
+    "id": "WEJ-2026-100",
+    "title": "福島ウイスキーテイスティングセミナー＆トークイベント（輿水精一氏×土屋守）",
+    "date": "2026-11-22",
+    "addedAt": "2026-11-04",
+    "imageUrl": "",
+    "dateLabel": "2026/11/22",
+    "region": "福島県",
+    "category": "セミナー",
+    "venue": "ラコパふくしま（福島市仲間町4-8）",
+    "price": "入場チケット16,000円（税込表記未確認）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://prtimes.jp/main/html/rd/p/000000378.000119996.html"
   },
   {
     "id": "WEJ-2026-091",
@@ -1393,6 +1423,21 @@
     "publicDescription": "松本で開催されるウイスキーフェスティバルです。入場は完全前売制で、公式チケットサイトから申し込みます。",
     "ticketUrl": "https://whiskyfestival.jp/matsumoto2027/tickets/",
     "url": "https://whiskyfestival.jp/matsumoto2027/tickets/"
+  },
+  {
+    "id": "WEJ-2026-101",
+    "title": "オーケー ウイスキーセミナー2027（山崎蒸溜所講師）アプリ抽選",
+    "date": "2027-01-16",
+    "addedAt": "2026-11-04",
+    "imageUrl": "",
+    "dateLabel": "2027/01/16",
+    "region": "神奈川県",
+    "category": "セミナー",
+    "venue": "会場詳細は当選者に招待状で案内（神奈川県某所）",
+    "price": "参加費公式未記載（オーケーアプリ会員カード発行費200円・商品購入条件なし）",
+    "publicDescription": "",
+    "ticketUrl": "",
+    "url": "https://ok-corporation.jp/news/entry-3347.html"
   },
   {
     "id": "WEJ-2026-046",
