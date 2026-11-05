@@ -2,11 +2,20 @@ name: Sync WEJ Events
 
 on:
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '照合のみ実行する（events.jsonを書き換えない）'
+        type: boolean
+        default: false
   schedule:
     - cron: '0 0 * * *'
 
 permissions:
   contents: write
+
+concurrency:
+  group: sync-events
+  cancel-in-progress: false
 
 jobs:
   sync:
@@ -21,17 +30,29 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Backup existing events
-        run: cp events.json events.json.backup
+      - name: Test sync script
+        run: python -m unittest discover -s tests -v
 
-      - name: Sync events from public CSV
-        run: python scripts/sync_events.py
+      # バックアップ作成・照合・内部情報チェックはスクリプト内で行う。
+      # 失敗した場合は events.json を書き換えずにジョブを停止する。
+      - name: Sync events from spreadsheet
+        run: python scripts/sync_events.py ${{ inputs.dry_run && '--dry-run' || '' }}
 
-      - name: Validate events JSON
-        run: |
-          python -m json.tool events.json > /dev/null
+      - name: Validate public events data
+        if: ${{ !inputs.dry_run }}
+        run: python scripts/sync_events.py --check
+
+      - name: Upload backup of previous events
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: events-backup-${{ github.run_id }}
+          path: events.json.backup
+          if-no-files-found: ignore
+          retention-days: 30
 
       - name: Commit updated events
+        if: ${{ !inputs.dry_run }}
         run: |
           git add events.json
           if ! git diff --cached --quiet; then
