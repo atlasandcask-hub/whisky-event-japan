@@ -51,7 +51,7 @@ PLACEHOLDERS = {"公式で確認"}
 
 # 内部管理メモ・制作記録とみなす表現。見つかった場合は公開処理を停止する。
 INTERNAL_PATTERNS = [
-    (r"metricool|Instagram制作|投稿(?:制作)?履歴|投稿ID", "SNS制作・運用記録"),
+    (r"metricool|Muse|投稿ストック|制作履歴|公開照合", "投稿管理記録"),
     (r"canva", "Canva"),
     (r"WEJ-", "管理ID（WEJ-）"),
     (r"github", "GitHub"),
@@ -92,7 +92,7 @@ def find_internal_text(value):
     return found
 
 
-def validate_events(events, *, check_internal=True, require_description=True):
+def validate_events(events, *, check_internal=True):
     """公開用イベントデータを検証し、問題の一覧を返す（空なら合格）。"""
     problems = []
     seen = set()
@@ -127,8 +127,8 @@ def validate_events(events, *, check_internal=True, require_description=True):
             problems.append(f"{where}: 開催日(date)が不正です。")
         if not str(event.get("title") or "").strip():
             problems.append(f"{where}: イベント名がありません。")
-        if require_description and not str(event.get("publicDescription") or "").strip():
-            problems.append(f"{where}: 公開用説明が空欄です。公式情報に基づく説明を入力してください。")
+        if check_internal and not str(event.get("publicDescription") or "").strip():
+            problems.append(f"{where}: 公開用説明が空欄です。")
 
         for field in PUBLIC_TEXT_FIELDS if check_internal else ():
             for label, hit in find_internal_text(event.get(field)):
@@ -179,8 +179,7 @@ def build_events(csv_text, existing):
         missing = sorted(REQUIRED - set(reader.fieldnames or []))
         raise SyncError("シートの見出しが不正です。", [f"不足している列: {missing}"])
 
-    # 移行時の空欄はシートの公開欄で補える。出力候補は必ず空欄なしで検証する。
-    problems = validate_events(existing, check_internal=False, require_description=False)
+    problems = validate_events(existing, check_internal=False)
     if problems:
         raise SyncError("既存公開データが不正です。", problems)
     if not existing:
