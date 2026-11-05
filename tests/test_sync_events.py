@@ -47,6 +47,9 @@ class SafetyTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.output = Path(self.tmp.name) / 'events.json'
         self.backup = Path(self.tmp.name) / 'events.json.backup'
+        self.holds = Path(self.tmp.name) / 'holds.json'
+        self.holds.write_text('{}')
+        p = patch.object(sync, 'HOLDS', self.holds); p.start(); self.addCleanup(p.stop)
         self.events = normal_events()
         self.write(self.events)
         for name, value in [('OUTPUT',self.output),('BACKUP',self.backup)]:
@@ -221,7 +224,10 @@ class Current97Tests(SafetyTests):
     def setUp(self):
         super().setUp()
         self.original = json.loads((ROOT/'tests/fixtures/events_2026-11-01.json').read_text())
-        self.events = json.loads((ROOT/'events.json').read_text())
+        self.events = json.loads(json.dumps(self.original))
+        for e in self.events:
+            if e['id']=='WEJ-2026-061': e['publicDescription']=e['publicDescription'].replace('既存DB未確認イベントの公式詳細を発見。','')
+            if e['id']=='WEJ-2026-066': e['publicDescription']=e['publicDescription'].replace('既存DBの11/21山鹿蒸溜所まつりとは別の日程・企画。','')
         self.source = (ROOT/'tests/fixtures/sheet_public_2026-11-01.csv').read_text()
         self.write(self.events)
 

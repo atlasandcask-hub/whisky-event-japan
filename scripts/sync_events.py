@@ -1,7 +1,7 @@
 """WEJイベントDB（Googleスプレッドシート）から公開用 events.json を生成する。
 
 - スプレッドシートを正本とし、イベントはIDで照合する。
-- 既存の掲載イベントがシートで「掲載」になっていない場合は削除せず停止する。
+- 既存IDの消失は停止。レビュー済みの保留IDだけはシート状態・公式URL一致時に除外する。
 - 内部管理欄（備考など）は一切使用しない。公開欄に内部情報があれば停止する。
 - いずれの失敗時も events.json は書き換えない。
 
@@ -32,6 +32,7 @@ CSV_URL = (
 )
 OUTPUT = Path("events.json")
 BACKUP = Path("events.json.backup")
+HOLDS = Path(__file__).with_name("publication_holds.json")
 MIN_EVENTS = 8
 
 REQUIRED = {
@@ -165,11 +166,27 @@ def cell(row, name):
     return (row.get(name) or "").strip()
 
 
-def build_events(csv_text, existing):
+def build_events(csv_text, existing, holds=None):
     """シートCSVと既存の公開データから新しい公開データを作る。
 
     問題があれば SyncError を送出する（呼び出し側はファイルを書き換えない）。
     """
+    holds = {} if holds is None else holds
+    if not isinstance(holds, dict):
+        raise SyncError("掲載保留の承認情報が不正です。")
+    for event_id, approval in holds.items():
+        if (not re.fullmatch(r"WEJ-20\d{2}-\d{3,}", event_id)
+                or not isinstance(approval, dict)
+                or set(approval) != {"status", "event_url", "evidence_url", "reason", "approved_on"}
+                or any(not isinstance(v, str) or not v.strip() for v in approval.values())
+                or approval["status"] != "保留"
+                or not is_https_url(approval["event_url"])
+                or not is_https_url(approval["evidence_url"])):
+            raise SyncError("掲載保留の承認情報が不正です。", [str(event_id)])
+        try:
+            date.fromisoformat(approval["approved_on"])
+        except ValueError:
+            raise SyncError("掲載保留の承認日が不正です。", [event_id])
     reader = csv.DictReader(io.StringIO(csv_text.lstrip("\ufeff")), strict=True)
 
     if not reader.fieldnames or not REQUIRED.issubset(reader.fieldnames):
@@ -194,6 +211,7 @@ def build_events(csv_text, existing):
 
     events = []
     sheet_status = {}
+    sheet_urls = {}
     seen_ids = set()
 
     for line, row in enumerate(reader, start=2):
@@ -208,6 +226,7 @@ def build_events(csv_text, existing):
         judgement = cell(row, "掲載判定")
         if event_id and event_id not in sheet_status:
             sheet_status[event_id] = judgement
+            sheet_urls[event_id] = cell(row, "公式URL")
         if judgement != "掲載":
             continue
 
@@ -267,10 +286,20 @@ def build_events(csv_text, existing):
             "url": url
         })
 
-    # 既存の掲載イベントがシートで掲載になっていなければ、削除せず停止する。
+    # レビュー済みの特定IDだけを除外可能とする。行の欠落や状態の再変更は承認に含まない。
+    approved_holds = set()
+    for item_id, approval in holds.items():
+        if (sheet_status.get(item_id) == approval["status"]
+                and sheet_urls.get(item_id) == approval["event_url"]
+                and (item_id not in existing_by_id
+                     or existing_by_id[item_id]["url"] == approval["event_url"])):
+            approved_holds.add(item_id)
+        else:
+            problems.append(f"{item_id}: 掲載保留の承認とシートの状態・公式URLが一致しません。")
+
     published_ids = {e["id"] for e in events}
     for item_id, item in existing_by_id.items():
-        if item_id in published_ids:
+        if item_id in published_ids or item_id in approved_holds:
             continue
         state = sheet_status.get(item_id)
         reason = "シートに行がありません" if state is None else f"掲載判定が「{state or '空欄'}」です"
@@ -319,6 +348,9 @@ def load_existing():
 def describe_changes(old_events, new_events):
     old_by_id = {e.get("id"): e for e in old_events}
     lines = []
+    new_ids = {e["id"] for e in new_events}
+    for event_id in sorted(set(old_by_id) - new_ids):
+        lines.append(f"承認済み掲載保留: {event_id}")
     for event in new_events:
         before = old_by_id.get(event["id"])
         if before is None:
@@ -356,7 +388,8 @@ def sync(dry_run=False, fetch=fetch_csv):
         existing = load_existing()
         if not dry_run and OUTPUT.exists():
             shutil.copy2(OUTPUT, BACKUP)
-        events = build_events(fetch(), existing)
+        holds = json.loads(HOLDS.read_text(encoding="utf-8"))
+        events = build_events(fetch(), existing, holds)
     except Exception as error:  # 失敗時は events.json に一切触れない
         report_error(error)
         return 1

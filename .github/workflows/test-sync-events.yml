@@ -4,6 +4,7 @@ on:
     paths:
       - 'events.json'
       - 'scripts/sync_events.py'
+      - 'scripts/publication_holds.json'
       - 'tests/**'
       - '.github/workflows/*sync-events.yml'
   push:
@@ -11,6 +12,7 @@ on:
     paths:
       - 'events.json'
       - 'scripts/sync_events.py'
+      - 'scripts/publication_holds.json'
       - 'tests/**'
 permissions:
   contents: read
