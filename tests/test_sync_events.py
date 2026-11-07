@@ -118,17 +118,19 @@ class SafetyTests(unittest.TestCase):
     def test_atomic_backup_dry_run_and_failures(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / 'events.json'; backup = Path(directory) / 'events.json.backup'
-            original = (ROOT / 'events.json').read_bytes(); output.write_bytes(original)
+            original = BEFORE.read_bytes(); output.write_bytes(original)
             with patch.object(sync, 'OUTPUT', output), patch.object(sync, 'BACKUP', backup), redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
                 self.assertEqual(sync.sync(dry_run=True, fetch=lambda: SOURCE.read_text()), 0)
                 self.assertEqual(output.read_bytes(), original); self.assertFalse(backup.exists())
                 self.assertEqual(sync.sync(fetch=lambda: SOURCE.read_text()), 0)
                 self.assertEqual(backup.read_bytes(), original)
+                published = output.read_bytes()
+                self.assertEqual(json.loads(published), self.events)
                 self.assertEqual(sync.sync(fetch=lambda: 'invalid'), 1)
-                self.assertEqual(output.read_bytes(), original)
+                self.assertEqual(output.read_bytes(), published)
                 with patch.object(Path, 'replace', side_effect=OSError('failure')):
                     self.assertEqual(sync.sync(fetch=lambda: SOURCE.read_text()), 1)
-                self.assertEqual(output.read_bytes(), original)
+                self.assertEqual(output.read_bytes(), published)
                 self.assertFalse(output.with_suffix('.json.tmp').exists())
 
     def test_html_escapes_only_public_description(self):
