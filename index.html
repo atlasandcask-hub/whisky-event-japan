@@ -74,7 +74,15 @@ function render(){
  const groups=new Map();const currentMonth=today.slice(0,7);
  // 前月以前に開始して現在も開催中の企画は、開始月ではなく今月に表示する。
  // 元の開催日・期間はカード内に保持し、同じイベントを複数月に重複掲載しない。
- for(const e of filtered){const p=period(e);const key=p.start<today&&p.end>=today&&p.start.slice(0,7)<currentMonth?currentMonth:e.date.slice(0,7);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(e)}
+ for(const e of filtered){
+  const p=period(e);
+  // 開始月が過去でも、今月末までのどこかで実施中なら今月の一覧に集約する。
+  // 終了済みは元の月に残し、元の開催期間ラベルは変更しない。
+  const ongoingFromPastMonth=p.start.slice(0,7)<currentMonth&&p.end>=today;
+  const key=ongoingFromPastMonth?currentMonth:e.date.slice(0,7);
+  if(!groups.has(key))groups.set(key,[]);
+  groups.get(key).push(e);
+ }
  const sortedGroups=[...groups].sort(([a],[b])=>a.localeCompare(b));
  $('cards').innerHTML=sortedGroups.map(([key,events])=>{
   const [year,month]=key.split('-');
