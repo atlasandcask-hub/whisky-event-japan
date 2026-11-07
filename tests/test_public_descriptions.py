@@ -14,7 +14,7 @@ import sync_events as sync
 class PublicDescriptionTests(unittest.TestCase):
     def setUp(self):
         self.before = json.loads((ROOT/'tests/fixtures/events_2026-11-05_before.json').read_text())
-        self.current = json.loads((ROOT/'events.json').read_text())
+        self.current = json.loads((ROOT/'tests/fixtures/events_after_2026-11-05.json').read_text())
         self.source = (ROOT/'tests/fixtures/sheet_public_2026-11-05.csv').read_text()
 
     def test_migration_preserves_all_ids_and_every_other_field(self):
