@@ -1,5 +1,20 @@
 [
   {
+    "id": "WEJ-2026-112",
+    "title": "第6回『秩父ウイスキー祭』実行委員会BARスタンプラリー2026-27",
+    "date": "2026-08-21",
+    "addedAt": "2026-11-15",
+    "imageUrl": "",
+    "dateLabel": "2026/08/21-2027/01/31",
+    "region": "埼玉県・東京都",
+    "category": "バー",
+    "venue": "秩父市7・県内その他7・東京都6の対象BAR計20店舗（個別営業時間は公式参照）",
+    "price": "各店でウイスキー2杯以上注文（料金は店別）／当選者ボトル27,500円",
+    "publicDescription": "秩父・埼玉県内（秩父以外）・東京の対象バーを巡るスタンプラリーです。秩父3店以上、埼玉県内（秩父以外）1店以上、東京1店以上の計5店以上でスタンプを集めると、限定ウイスキー「秩父ローカルバーレイ・ゴールデンメロン」の購入抽選に応募できます。開催は2027年1月31日まで、応募ハガキは2月3日必着。当選時の購入価格は27,500円（税込）です。",
+    "ticketUrl": "",
+    "url": "https://whiskymew.jp/items/2026/chichibu-stamprally/item-stamprally.html"
+  },
+  {
     "id": "WEJ-2026-078",
     "title": "プルマン東京田町『旅するジャパニーズウイスキーフェア』",
     "date": "2026-09-01",
@@ -1398,7 +1413,7 @@
     "id": "WEJ-2026-064",
     "title": "酒育の会 くりりん氏特別セミナー『日本のウイスキー蒸留所の現在地』",
     "date": "2026-12-13",
-    "addedAt": "2026-10-21",
+    "addedAt": "2026-11-15",
     "imageUrl": "",
     "dateLabel": "2026/12/13 13:00～15:00",
     "region": "東京都",
@@ -1407,7 +1422,7 @@
     "price": "会員10,000円／一般12,000円（税込）",
     "publicDescription": "講師くりりん氏。日本のウイスキー蒸留所事情を解説。定員25名。",
     "ticketUrl": "",
-    "url": "https://shuiku.jp/news/20492"
+    "url": "https://liqul.com/event/ev-7638"
   },
   {
     "id": "WEJ-2026-045",
@@ -1528,6 +1543,51 @@
     "publicDescription": "土屋守氏がウイスキーの現在と未来を語る名古屋開催のセミナーです。ウイスキー業界の動向やこれからの可能性について学べます。",
     "ticketUrl": "",
     "url": "https://scotchclub.org/eventseminar/tsuchiyamamorunagoyaseminaar/"
+  },
+  {
+    "id": "WEJ-2026-110",
+    "title": "山崎蒸溜所 2027年2月有料ツアー抽選受付",
+    "date": "2027-02-01",
+    "addedAt": "2026-11-15",
+    "imageUrl": "",
+    "dateLabel": "2027/02",
+    "region": "大阪府",
+    "category": "蒸溜所",
+    "venue": "山崎蒸溜所（三島郡島本町山崎5-2-1）",
+    "price": "有料（具体的料金未確認）",
+    "publicDescription": "2027年2月開催の「山崎蒸溜所ものづくりツアー」と「山崎蒸溜所ものづくりツアー プレステージ」は有料・抽選制です。応募は2026年12月2日10:00から12月6日16:29までで、1組5名まで。抽選結果は12月11日にメールで案内されます。",
+    "ticketUrl": "",
+    "url": "https://www.suntory.co.jp/factory/yamazaki/news/detail/post_4.html"
+  },
+  {
+    "id": "WEJ-2026-109",
+    "title": "白州蒸溜所 2027年2月有料ツアー抽選受付",
+    "date": "2027-02-01",
+    "addedAt": "2026-11-15",
+    "imageUrl": "",
+    "dateLabel": "2027/02",
+    "region": "山梨県",
+    "category": "蒸溜所",
+    "venue": "白州蒸溜所（北杜市白州町鳥原2913-1）",
+    "price": "有料（具体的料金未確認）",
+    "publicDescription": "2027年2月開催の「白州蒸溜所ものづくりツアー」と「Story of the HAKUSHU」は有料・抽選制です。応募は2026年12月1日9:30から12月5日16:29まで。抽選結果は12月10日にメールで案内されます。",
+    "ticketUrl": "",
+    "url": "https://www.suntory.co.jp/factory/hakushu/news/detail/post_6.html"
+  },
+  {
+    "id": "WEJ-2026-111",
+    "title": "第14回 秩父ウイスキー祭2027",
+    "date": "2027-02-21",
+    "addedAt": "2026-11-15",
+    "imageUrl": "",
+    "dateLabel": "2027/02/21",
+    "region": "埼玉県",
+    "category": "フェス",
+    "venue": "秩父市内（2027年の詳細会場・開始終了時刻未公表）",
+    "price": "入場料未公表",
+    "publicDescription": "第14回秩父ウイスキー祭は2027年2月21日（日）に開催予定です。入場料やチケットの販売方法は、主催者の公式案内をご確認ください。",
+    "ticketUrl": "",
+    "url": "https://www.chichibuwhiskymatsuri.jp/"
   },
   {
     "id": "WEJ-2026-076",
